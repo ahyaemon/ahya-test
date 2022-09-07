@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+    width: fit-content;
+    grid-template-columns: auto auto;
+}
+
+.icon {
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.icon img {
+    height: 40px;
+}
+
+.message {
+    grid-row: 1;
+
+    color: #505050;
+
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.left {
+    grid-column: 1;
+}
+
+.right {
+    grid-column: 2;
+}
