@@ -1,0 +1,11 @@
+.introduction {
+    justify-self: center;
+
+    display: flex;
+    justify-content:center;
+}
+
+.checkList {
+    max-width: 800px;
+    justify-self: center;
+}
