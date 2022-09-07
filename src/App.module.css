@@ -1,11 +1,14 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(1, auto);
     gap: 40px 0;
 }
 
 .header {
     margin: 20px 0 0 20px;
+}
+
+.main {
+    justify-self: center;
 }
 
 .footer {

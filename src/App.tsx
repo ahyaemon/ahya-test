@@ -10,16 +10,18 @@ const App: Component = () => {
 
     return (
         <div class={classes.container}>
-            <div class={classes.header}>
+            <header class={classes.header}>
                 <Header/>
-            </div>
-            <Routes>
-                <Route path="/" component={TestPage}/>
-                <Route path="/result" component={ResultPage}/>
-            </Routes>
-            <div class={classes.footer}>
+            </header>
+            <main class={classes.main}>
+                <Routes>
+                    <Route path="/" component={TestPage}/>
+                    <Route path="/result" component={ResultPage}/>
+                </Routes>
+            </main>
+            <footer class={classes.footer}>
                 <Footer/>
-            </div>
+            </footer>
         </div>
     );
 };
