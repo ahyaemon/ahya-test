@@ -2,6 +2,7 @@ import {Component, For} from "solid-js";
 import {Comment} from "./Comment";
 import {CommentIcon} from "../types/CommentIcon";
 import {CommentPosition} from "../types/CommentPosition";
+import classes from "./Conversation.module.css";
 
 const comments = [
     {
@@ -24,9 +25,11 @@ const comments = [
 export const Conversation: Component = () => {
 
     return (
-        <div>
+        <div class={classes.container}>
             <For each={comments}>{comment =>
-                <Comment {...comment}/>
+                <div class={comment.position === CommentPosition.left ? classes.left : classes.right}>
+                    <Comment {...comment}/>
+                </div>
             }</For>
         </div>
     )

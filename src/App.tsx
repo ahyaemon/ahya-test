@@ -5,11 +5,11 @@ import {Conversation} from "./components/Conversation";
 
 const App: Component = () => {
     return (
-        <div>
+        <div class={classes.container}>
             <div class={classes.header}>
                 <Header/>
             </div>
-            <div>
+            <div class={classes.conversation}>
                 <Conversation/>
             </div>
         </div>

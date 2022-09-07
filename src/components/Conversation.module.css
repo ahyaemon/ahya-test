@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    width: 460px;
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        width: 94vw;
+    }
+}
+
+.left {
+    justify-self: left;
+}
+
+.right {
+    justify-self: right;
+}
