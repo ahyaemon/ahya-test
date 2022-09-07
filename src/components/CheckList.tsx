@@ -19,6 +19,7 @@ export const CheckList: Component = () => {
             <For each={checks}>{ (check, i) =>
                 <Check checkNumber={i() + 1} title={check.title} options={check.options}/>
             }</For>
+            <button class={classes.submit}>回答する</button>
         </div>
     )
 }

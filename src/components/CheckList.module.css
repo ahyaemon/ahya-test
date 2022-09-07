@@ -3,3 +3,16 @@
     grid-column: 1;
     gap: 40px;
 }
+
+.submit {
+    justify-self: center;
+
+    width: 300px;
+    height: 40px;
+    background-color: #e7a23a;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
