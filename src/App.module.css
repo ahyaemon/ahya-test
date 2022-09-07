@@ -14,3 +14,9 @@
     display: flex;
     justify-content:center;
 }
+
+.checkList {
+    margin-top: 40px;
+    max-width: 800px;
+    justify-self: center;
+}
