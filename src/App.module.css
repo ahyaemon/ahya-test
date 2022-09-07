@@ -1,6 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: repeat(1, auto);
+    gap: 40px 0;
 }
 
 .header {
@@ -8,7 +9,6 @@
 }
 
 .introduction {
-    margin-top: 40px;
     justify-self: center;
 
     display: flex;
@@ -16,7 +16,11 @@
 }
 
 .checkList {
-    margin-top: 40px;
     max-width: 800px;
     justify-self: center;
+}
+
+.footer {
+    justify-self: center;
+    margin-bottom: 20px;
 }

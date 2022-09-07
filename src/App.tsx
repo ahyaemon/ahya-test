@@ -3,6 +3,7 @@ import {Header} from "./components/Header";
 import classes from "./App.module.css";
 import {Introduction} from "./components/Introduction";
 import {CheckList} from "./components/CheckList";
+import {Footer} from "./components/Footer";
 
 const App: Component = () => {
     return (
@@ -15,6 +16,9 @@ const App: Component = () => {
             </div>
             <div class={classes.checkList}>
                 <CheckList/>
+            </div>
+            <div class={classes.footer}>
+                <Footer/>
             </div>
         </div>
     );
