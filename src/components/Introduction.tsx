@@ -2,7 +2,7 @@ import {Component, For} from "solid-js";
 import {Comment} from "./Comment";
 import {CommentIcon} from "../types/CommentIcon";
 import {CommentPosition} from "../types/CommentPosition";
-import classes from "./Conversation.module.css";
+import classes from "./Introduction.module.css";
 
 const comments = [
     {
@@ -22,7 +22,7 @@ const comments = [
     },
 ]
 
-export const Conversation: Component = () => {
+export const Introduction: Component = () => {
 
     return (
         <div class={classes.container}>

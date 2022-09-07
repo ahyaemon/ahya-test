@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js';
 import {Header} from "./components/Header";
 import classes from "./App.module.css";
-import {Conversation} from "./components/Conversation";
+import {Introduction} from "./components/Introduction";
 
 const App: Component = () => {
     return (
@@ -9,8 +9,8 @@ const App: Component = () => {
             <div class={classes.header}>
                 <Header/>
             </div>
-            <div class={classes.conversation}>
-                <Conversation/>
+            <div class={classes.introduction}>
+                <Introduction/>
             </div>
         </div>
     );
