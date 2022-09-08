@@ -15,7 +15,7 @@ export const Question: Component<QuestionProps> = (props) => {
             <div class={classes.optionContainer}>
                 <For each={props.options}>{ (option, i) =>
                     <div class={classes.optionArea} onClick={ () => store.check(props.questionNumber, option)}>
-                        <div class={classes.checkBox}>{store.checked(props.questionNumber, i(), option) ? "✔" : ""}️</div>
+                        <div class={classes.checkBox}>{store.checked(props.questionNumber, i(), option) ? "✔" : ""}</div>
                         <div class={classes.option}>{option}</div>
                     </div>
                 }</For>
