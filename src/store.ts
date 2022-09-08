@@ -1,25 +1,11 @@
 import {createSignal} from "solid-js";
+import {Question} from "./questions/Question";
+import {animalQuestion} from "./questions/Animal";
+import {colorQuestion} from "./questions/Color";
 
-type Question = {
-    title: string
-    options: string[]
-    answer: string | undefined
-}
+function createStore(_questions: Question[]) {
 
-function createStore() {
-
-    const [questions, setQuestions] = createSignal<Question[]>([
-        {
-            title: '好きな動物は？',
-            options: ['犬', '猫', 'キツネ', 'ウサギ', 'ゴリラ'],
-            answer: undefined,
-        },
-        {
-            title: '好きな色は？',
-            options: ['赤', '青', '黄', '黒', '白'],
-            answer: undefined,
-        },
-    ])
+    const [questions, setQuestions] = createSignal<Question[]>(_questions)
 
     return {
         questions,
@@ -32,8 +18,11 @@ function createStore() {
             const newChecks = [...questions()]
             newChecks[checkNumber - 1] = newCheck
             setQuestions(newChecks)
-        }
+        },
     }
 }
 
-export const store = createStore()
+export const store = createStore([
+    animalQuestion,
+    colorQuestion,
+])
