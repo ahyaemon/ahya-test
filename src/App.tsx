@@ -5,6 +5,7 @@ import {Footer} from "./components/Footer";
 import {TestPage} from "./pages/TestPage";
 import {Route, Routes} from '@solidjs/router';
 import {ResultPage} from "./pages/ResultPage";
+import {Toaster} from "solid-toast";
 
 const App: Component = () => {
 
@@ -22,6 +23,7 @@ const App: Component = () => {
             <footer class={classes.footer}>
                 <Footer/>
             </footer>
+            <Toaster/>
         </div>
     );
 };

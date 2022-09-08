@@ -3,6 +3,7 @@ import {Comment} from "./Comment";
 import {CommentIcon} from "../types/CommentIcon";
 import {CommentPosition} from "../types/CommentPosition";
 import classes from "./Introduction.module.css";
+import {getRandom} from "../utils/random";
 
 type Comment = {
     icon: CommentIcon
@@ -39,8 +40,7 @@ function createMusumeComment(position: CommentPosition, message: string): Commen
 }
 
 function getRandomConversation(): Conversation {
-    const i = Math.floor(Math.random() * conversations.length)
-    return conversations[i]
+    return getRandom(conversations)
 }
 
 export const Introduction: Component = () => {
