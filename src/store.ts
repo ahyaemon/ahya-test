@@ -1,11 +1,13 @@
 import {createSignal} from "solid-js";
 import {Question} from "./questions/Question";
 import {animalQuestion} from "./questions/Animal";
-import {colorQuestion} from "./questions/Color";
+import {Color, colorQuestion, toAdjective} from "./questions/Color";
+import {Result} from "./types/Result";
 
-function createStore(_questions: Question[]) {
+// FIXME any
+function createStore(_questions: Question<any>[]) {
 
-    const [questions, setQuestions] = createSignal<Question[]>(_questions)
+    const [questions, setQuestions] = createSignal<Question<any>[]>(_questions)
 
     return {
         questions,
@@ -19,6 +21,13 @@ function createStore(_questions: Question[]) {
             newChecks[checkNumber - 1] = newCheck
             setQuestions(newChecks)
         },
+        result: (): Result => {
+            return {
+                ahyaType: toAdjective(questions()[1].answer ?? Color.black) + questions()[0].answer,
+                animal: questions()[0].answer,
+                color: questions()[1].answer,
+            }
+        }
     }
 }
 

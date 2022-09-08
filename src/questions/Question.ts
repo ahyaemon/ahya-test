@@ -1,10 +1,10 @@
-export type Question = {
+export type Question<T> = {
     title: string
-    options: string[]
-    answer: string | undefined
+    options: T[]
+    answer: T | undefined
 }
 
-export function createQuestion(title: string, options: string[]): Question {
+export function createQuestion <T> (title: string, options: T[]): Question<T> {
     return {
         title,
         options,

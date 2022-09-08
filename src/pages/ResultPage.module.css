@@ -6,13 +6,40 @@
 
 .image {
     height: 300px;
-    background-color: red;
-    -webkit-mask-image: url(../assets/gorilla.svg);
-    mask-image: url(../assets/gorilla.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.black { background-color: black; }
+
+.gorilla {
+    -webkit-mask-image: url(../assets/gorilla.svg);
+    mask-image: url(../assets/gorilla.svg);
+}
+
+.cat {
+    -webkit-mask-image: url(../assets/cat2.svg);
+    mask-image: url(../assets/cat2.svg);
+}
+
+.dog {
+    -webkit-mask-image: url(../assets/dog.svg);
+    mask-image: url(../assets/dog.svg);
+}
+
+.fox {
+    -webkit-mask-image: url(../assets/fox.svg);
+    mask-image: url(../assets/fox.svg);
+}
+
+.rabbit {
+    -webkit-mask-image: url(../assets/rabbit.svg);
+    mask-image: url(../assets/gorilla.svg);
 }
 
 .detail {

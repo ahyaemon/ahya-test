@@ -13,3 +13,12 @@ export const colorQuestion = createQuestion(
     '好きな色は？',
     [Color.red, Color.blue, Color.green, Color.black]
 )
+
+export function toAdjective(color: Color): string {
+    switch (color) {
+        case Color.red: return '赤い'
+        case Color.blue: return '青い'
+        case Color.green: return '緑の'
+        case Color.black: return '黒い'
+    }
+}
