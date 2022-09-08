@@ -27,6 +27,16 @@ function createStore(_questions: Question<any>[]) {
                 animal: questions()[0].answer,
                 color: questions()[1].answer,
             }
+        },
+        allChecked: (): boolean => {
+            return questions().every(q => q.answer !== undefined)
+        },
+        getFirstUncheckedQuestion: (): number | undefined => {
+            const uncheckedQuestions = questions().filter(q => q.answer === undefined)
+            if (uncheckedQuestions.length === 0) {
+                return undefined
+            }
+            return questions().indexOf(uncheckedQuestions[0])
         }
     }
 }
