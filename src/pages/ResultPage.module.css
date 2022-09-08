@@ -23,8 +23,8 @@
 }
 
 .cat {
-    -webkit-mask-image: url(../assets/cat2.svg);
-    mask-image: url(../assets/cat2.svg);
+    -webkit-mask-image: url(src/assets/cat.svg);
+    mask-image: url(src/assets/cat.svg);
 }
 
 .dog {
