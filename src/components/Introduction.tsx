@@ -23,6 +23,11 @@ const conversations: Conversation[] = [
         createMusumeComment(CommentPosition.right, '当てはまる回答がない'),
         createObasanComment(CommentPosition.left, 'それでも答えるのが大人なのよ'),
     ],
+    [
+        createObasanComment(CommentPosition.left, 'あんまり考え込まずに直感で回答しましょう'),
+        createMusumeComment(CommentPosition.right, 'うーん、本当にそれで良いのかな'),
+        createObasanComment(CommentPosition.left, '言うこと聞いてたか？'),
+    ],
 ]
 
 function createObasanComment(position: CommentPosition, message: string): Comment {
