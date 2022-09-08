@@ -1,4 +1,4 @@
-import {Component, For} from "solid-js";
+import {Component, createSignal, For} from "solid-js";
 import classes from "./Check.module.css";
 
 type CheckProps = {
@@ -8,13 +8,20 @@ type CheckProps = {
 }
 
 export const Check: Component<CheckProps> = (props) => {
+
+    let [checkedIndex, setCheckedIndex] = createSignal<number | undefined>(undefined)
+
+    const toggleCheck = (i: number) => {
+        setCheckedIndex(i)
+    }
+
     return (
         <div>
             <div class={classes.title}>Q{props.checkNumber}. {props.title}</div>
             <div class={classes.optionContainer}>
-                <For each={props.options}>{ option =>
-                    <div class={classes.optionArea}>
-                        <div class={classes.checkBox}></div>
+                <For each={props.options}>{ (option, i) =>
+                    <div class={classes.optionArea} onClick={ () => toggleCheck(i())}>
+                        <div class={classes.checkBox}>{checkedIndex() === i() ? "✔️" : ""}️</div>
                         <div class={classes.option}>{option}</div>
                     </div>
                 }</For>

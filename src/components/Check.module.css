@@ -17,6 +17,10 @@
     grid-row: 1;
     justify-items: center;
     gap: 4px 0;
+
+    font-size: 34px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .checkBox {
