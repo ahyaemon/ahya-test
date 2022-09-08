@@ -3,9 +3,12 @@ import dog from "../assets/dog.svg";
 import fox from "../assets/fox.svg";
 import rabbit from "../assets/rabbit.svg";
 import gorilla from "../assets/gorilla.svg";
+import obasan from "../assets/obasan.png";
+import ojisan from "../assets/ojisan.png";
+import musume from "../assets/musume.png";
 
 export function preloadImages() {
-    [cat, dog, fox, rabbit, gorilla].forEach(src => {
+    [obasan, musume, ojisan, cat, dog, fox, rabbit, gorilla].forEach(src => {
         const img = document.createElement('img')
         img.src = src
     })
