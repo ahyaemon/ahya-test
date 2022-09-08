@@ -1,10 +1,10 @@
 import {Component, For} from "solid-js";
-import {Check} from "./Check";
-import classes from "./CheckList.module.css";
+import {Question} from "./Question";
+import classes from "./Exam.module.css";
 import {useNavigate} from "@solidjs/router";
 import {store} from "../store";
 
-export const CheckList: Component = () => {
+export const Exam: Component = () => {
 
     const navigate = useNavigate()
 
@@ -14,8 +14,8 @@ export const CheckList: Component = () => {
 
     return (
         <div class={classes.container}>
-            <For each={store.checks()}>{ (check, i) =>
-                <Check checkNumber={i() + 1} title={check.title} options={check.options}/>
+            <For each={store.questions()}>{ (question, i) =>
+                <Question questionNumber={i() + 1} title={question.title} options={question.options}/>
             }</For>
             <button class={classes.submit} onClick={handleSubmit}>回答する</button>
         </div>

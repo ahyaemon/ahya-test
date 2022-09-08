@@ -1,6 +1,6 @@
 import {createSignal} from "solid-js";
 
-type Check = {
+type Question = {
     title: string
     options: string[]
     answer: string | undefined
@@ -8,7 +8,7 @@ type Check = {
 
 function createStore() {
 
-    const [checks, setChecks] = createSignal<Check[]>([
+    const [questions, setQuestions] = createSignal<Question[]>([
         {
             title: '好きな動物は？',
             options: ['犬', '猫', 'キツネ', 'ウサギ', 'ゴリラ'],
@@ -22,17 +22,16 @@ function createStore() {
     ])
 
     return {
-        checks,
-        setChecks,
+        questions,
         checked: (checkNumber: number, i: number, option: string): boolean => {
-            return checks()[checkNumber - 1].answer === option
+            return questions()[checkNumber - 1].answer === option
         },
         check: (checkNumber: number, answer: string) => {
-            const check = checks()[checkNumber - 1]
+            const check = questions()[checkNumber - 1]
             const newCheck = { ...check, answer }
-            const newChecks = [...checks()]
+            const newChecks = [...questions()]
             newChecks[checkNumber - 1] = newCheck
-            store.setChecks(newChecks)
+            setQuestions(newChecks)
         }
     }
 }

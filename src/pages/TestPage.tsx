@@ -1,7 +1,7 @@
 import {Component} from "solid-js";
 import classes from "./TestPage.module.css";
 import {Introduction} from "../components/Introduction";
-import {CheckList} from "../components/CheckList";
+import {Exam} from "../components/Exam";
 
 export const TestPage: Component = () => {
     return (
@@ -9,8 +9,8 @@ export const TestPage: Component = () => {
             <div class={classes.introduction}>
                 <Introduction/>
             </div>
-            <div class={classes.checkList}>
-                <CheckList/>
+            <div class={classes.exam}>
+                <Exam/>
             </div>
         </div>
     )
