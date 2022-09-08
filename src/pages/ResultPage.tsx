@@ -4,6 +4,7 @@ import {store} from "../store";
 import {Result} from "../types/Result";
 import {Animal} from "../questions/Animal";
 import {Color} from "../questions/Color";
+import {toast} from "solid-toast";
 
 // FIXME 回答は query parameter で渡すようにする
 export const ResultPage: Component = () => {
@@ -12,6 +13,7 @@ export const ResultPage: Component = () => {
 
     onMount(() => {
         setResult(store.result())
+        toast.dismiss()
     })
 
     return (
