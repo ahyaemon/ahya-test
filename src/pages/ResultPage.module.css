@@ -1,0 +1,22 @@
+.container {
+    color: #555555;
+    text-align: center;
+    font-size: 14px;
+}
+
+.image {
+    height: 300px;
+    background-color: red;
+    -webkit-mask-image: url(../assets/gorilla.svg);
+    mask-image: url(../assets/gorilla.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.detail {
+    margin: 0 10px;
+    max-width: 600px;
+    line-height: 1.6;
+}
