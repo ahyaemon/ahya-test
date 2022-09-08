@@ -2,17 +2,7 @@ import {Component, For} from "solid-js";
 import {Check} from "./Check";
 import classes from "./CheckList.module.css";
 import {useNavigate} from "@solidjs/router";
-
-const checks = [
-    {
-        title: '好きな動物は？',
-        options: ['犬', '猫', 'キツネ', 'トラ', 'ゴリラ'],
-    },
-    {
-        title: '好きな色は？',
-        options: ['赤', '青', '黄', '黒', '白'],
-    },
-]
+import {store} from "../store";
 
 export const CheckList: Component = () => {
 
@@ -24,7 +14,7 @@ export const CheckList: Component = () => {
 
     return (
         <div class={classes.container}>
-            <For each={checks}>{ (check, i) =>
+            <For each={store.checks()}>{ (check, i) =>
                 <Check checkNumber={i() + 1} title={check.title} options={check.options}/>
             }</For>
             <button class={classes.submit} onClick={handleSubmit}>回答する</button>
