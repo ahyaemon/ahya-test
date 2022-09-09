@@ -1,0 +1,13 @@
+.container {
+    color: #505050;
+    margin: 0 20px;
+}
+
+.container a {
+    color: #505050;
+}
+
+.externalLinkIcon {
+    margin-left: 4px;
+    width: 16px;
+}
