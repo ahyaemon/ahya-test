@@ -6,10 +6,13 @@
 
 .image {
     height: 300px;
+    width: 100vw;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
 }
 
 .red { background-color: red; }
@@ -18,28 +21,28 @@
 .black { background-color: black; }
 
 .gorilla {
-    -webkit-mask-image: url(../assets/gorilla.svg);
-    mask-image: url(../assets/gorilla.svg);
+    -webkit-mask-image: url(../assets/gorilla.png);
+    mask-image: url(../assets/gorilla.png);
 }
 
 .cat {
-    -webkit-mask-image: url(../assets/cat.svg);
-    mask-image: url(../assets/cat.svg);
+    -webkit-mask-image: url(../assets/cat.png);
+    mask-image: url(../assets/cat.png);
 }
 
 .dog {
-    -webkit-mask-image: url(../assets/dog.svg);
-    mask-image: url(../assets/dog.svg);
+    -webkit-mask-image: url(../assets/dog.png);
+    mask-image: url(../assets/dog.png);
 }
 
 .fox {
-    -webkit-mask-image: url(../assets/fox.svg);
-    mask-image: url(../assets/fox.svg);
+    -webkit-mask-image: url(../assets/fox.png);
+    mask-image: url(../assets/fox.png);
 }
 
 .rabbit {
-    -webkit-mask-image: url(../assets/rabbit.svg);
-    mask-image: url(../assets/gorilla.svg);
+    -webkit-mask-image: url(../assets/rabbit.png);
+    mask-image: url(../assets/rabbit.png);
 }
 
 .detail {
