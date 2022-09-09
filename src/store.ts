@@ -21,11 +21,26 @@ function createStore(_questions: Question<any>[]) {
             newChecks[checkNumber - 1] = newCheck
             setQuestions(newChecks)
         },
-        result: (): Result => {
+        createResultFromAnswerString: (params: string): Result => {
+            const answerIndexes = params.split('').map(s => parseInt(s))
+            if (answerIndexes.length !== questions().length) {
+                throw Error()
+            }
+
+            const animal = questions()[0].options[answerIndexes[0]]
+            if (animal === undefined) {
+                throw Error()
+            }
+
+            const color = questions()[1].options[answerIndexes[1]]
+            if (color === undefined) {
+                throw Error()
+            }
+
             return {
-                ahyaType: toAdjective(questions()[1].answer ?? Color.black) + questions()[0].answer,
-                animal: questions()[0].answer,
-                color: questions()[1].answer,
+                ahyaType: toAdjective(color) + animal,
+                animal,
+                color,
             }
         },
         allChecked: (): boolean => {
@@ -37,6 +52,9 @@ function createStore(_questions: Question<any>[]) {
                 return undefined
             }
             return questions().indexOf(uncheckedQuestions[0])
+        },
+        createQueryParams: (): string => {
+            return questions().map(q => q.options.indexOf(q.answer)).join('')
         }
     }
 }

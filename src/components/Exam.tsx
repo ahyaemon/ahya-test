@@ -24,7 +24,7 @@ export const Exam: Component = () => {
     const handleSubmit = () => {
         const unchecked = store.getFirstUncheckedQuestion()
         if (unchecked === undefined) {
-            navigate('/result')
+            navigate(`/result?a=${store.createQueryParams()}`)
             return
         }
 
