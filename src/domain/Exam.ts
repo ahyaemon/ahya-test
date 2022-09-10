@@ -2,20 +2,30 @@ import {Animal, initialAnimalQuestion} from "./Animal";
 import {Color, initialColorQuestion} from "./Color";
 import {Question} from "./Question";
 import {Result} from "./Result";
+import {initialMovementQuestion, Movement} from "./Movement";
 
 export class Exam {
 
     private constructor(
         private readonly animalQuestion: Question<Animal>,
         private readonly colorQuestion: Question<Color>,
+        private readonly movementQuestion: Question<Movement>
     ) {}
 
     static init(): Exam {
-        return new Exam(initialAnimalQuestion, initialColorQuestion)
+        return new Exam(
+            initialAnimalQuestion,
+            initialColorQuestion,
+            initialMovementQuestion,
+        )
     }
 
     questions(): Question<any>[] {
-        return [this.animalQuestion, this.colorQuestion]
+        return [
+            this.animalQuestion,
+            this.colorQuestion,
+            this.movementQuestion,
+        ]
     }
 
     checked(checkNumber: number, option: any): boolean {
@@ -27,16 +37,25 @@ export class Exam {
         return false
     }
 
+    // FIXME できれば checkNumber じゃなくて question で受け取りたい。questions() を呼び出せばいけるか？
     check(checkNumber: number, answer: any): Exam {
         if (checkNumber === 1) {
             return new Exam(
                 this.animalQuestion.check(answer),
-                this.colorQuestion
+                this.colorQuestion,
+                this.movementQuestion,
             )
         } else if (checkNumber === 2) {
             return new Exam(
                 this.animalQuestion,
-                this.colorQuestion.check(answer)
+                this.colorQuestion.check(answer),
+                this.movementQuestion,
+            )
+        } else if (checkNumber === 3) {
+            return new Exam(
+                this.animalQuestion,
+                this.colorQuestion,
+                this.movementQuestion.check(answer),
             )
         }
         return this
