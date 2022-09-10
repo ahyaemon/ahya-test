@@ -33,13 +33,23 @@ export const ResultPage: Component = () => {
 
     return (
         <div class={classes.container}>
-            <div style={{ "margin-top": "20px" }}>あなたの AHYA-TYPE は・・・</div>
-            <div style={{ "margin-top": "40px", "font-size": "24px", "font-weight": "bold", color: "#333" }}>{result.ahyaType}</div>
-            <div style={{ "margin-top": "10px" }}>
-                <div class={`${classes.image} ${animalImageClass(result.animal)} ${animalColorClass(result.color)}`}></div>
+            <div>
+                <div style={{ "margin-top": "20px" }}>あなたの AHYA-TYPE は・・・</div>
+                <div style={{ "margin-top": "40px", "font-size": "24px", "font-weight": "bold", color: "#333" }}>{result.ahyaType}</div>
+                <div style={{ "margin-top": "10px" }}>
+                    <div class={`${classes.image} ${animalImageClass(result.animal)} ${animalColorClass(result.color)}`}></div>
+                </div>
             </div>
-            <div style={{ "margin": "20px auto 0 auto", "padding": "0 10px", "max-width": "400px", "text-align": "justify" }}>{result.movementExplanation}</div>
-            <div style={{ "margin": "0px auto 0 auto", "padding": "0 10px", "max-width": "400px", "text-align": "justify" }}>{result.anxietyExplanation}</div>
+
+            <div style={{ "margin-top": "20px" }}>
+                <div class={classes.explanation}>{result.movementExplanation}</div>
+                <div class={classes.explanation}>{result.anxietyExplanation}</div>
+            </div>
+
+            <div class={classes.quote}>
+                <div class={classes.quoteMessage}>おまえは今まで食ったパンの枚数をおぼえているのか？</div>
+                <div class={classes.quoteAuthor}>ディオ・ブランドー</div>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 .container {
-    color: #555555;
+    color: #333;
     text-align: center;
     font-size: 14px;
 }
@@ -45,8 +45,30 @@
     mask-image: url(../assets/rabbit.png);
 }
 
-.detail {
-    margin: 0 10px;
-    max-width: 600px;
+.explanation {
+    margin: 0 auto;
+    max-width: 400px;
     line-height: 1.6;
+    text-align: justify;
+}
+
+.quote {
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    padding: 18px;
+
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.quoteMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #505050;
+}
+
+.quoteAuthor {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #505050;
 }
