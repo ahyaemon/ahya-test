@@ -74,8 +74,10 @@ export class Exam {
             throw Error(`invalid query params length. expected: ${this.questions().length}, actual: ${answerIndexes.length}`)
         }
 
-        const animal = this.animalQuestion.options[answerIndexes[0]]
-        const color = this.colorQuestion.options[answerIndexes[1]]
-        return new Result(animal, color)
+        return new Result(
+            this.animalQuestion.options[answerIndexes[0]],
+            this.colorQuestion.options[answerIndexes[1]],
+            this.movementQuestion.options[answerIndexes[2]],
+        )
     }
 }

@@ -31,14 +31,14 @@ export const ResultPage: Component = () => {
         )
     }
 
-
     return (
         <div class={classes.container}>
             <div style={{ "margin-top": "20px" }}>あなたの AHYA-TYPE は・・・</div>
             <div style={{ "margin-top": "40px", "font-size": "24px", "font-weight": "bold", color: "#333" }}>{result.ahyaType}</div>
-            <div style={{ "margin-top": "10px"}}>
+            <div style={{ "margin-top": "10px" }}>
                 <div class={`${classes.image} ${animalImageClass(result.animal)} ${animalColorClass(result.color)}`}></div>
             </div>
+            <div style={{ "margin": "20px auto 0 auto", "padding": "10px", "max-width": "400px", "text-align": "justify" }}>{result.explanation}</div>
         </div>
     )
 }
