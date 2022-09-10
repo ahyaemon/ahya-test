@@ -1,5 +1,5 @@
 import {Animal} from "./Animal";
-import {Color, toAdjective} from "./Color";
+import {Color} from "./Color";
 import {initialAnimalQuestion, initialColorQuestion, Question} from "./Question";
 import {Result} from "./Result";
 
@@ -66,10 +66,6 @@ export class Exam {
 
         const animal = this.animalQuestion.options[answerIndexes[0]]
         const color = this.colorQuestion.options[answerIndexes[1]]
-        return {
-            ahyaType: toAdjective(color) + animal,
-            animal,
-            color,
-        }
+        return new Result(animal, color)
     }
 }

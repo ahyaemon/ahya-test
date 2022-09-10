@@ -1,8 +1,14 @@
 import {Animal} from "./Animal";
-import {Color} from "./Color";
+import {Color, toAdjective} from "./Color";
 
-export type Result = {
-    ahyaType: string
-    animal: Animal
-    color: Color
+export class Result {
+
+    constructor(
+        readonly animal: Animal,
+        readonly color: Color,
+    ) {}
+
+    get ahyaType(): string {
+        return toAdjective(this.color) + this.animal
+    }
 }
