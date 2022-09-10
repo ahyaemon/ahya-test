@@ -1,7 +1,7 @@
-import {Animal} from "../questions/Animal";
-import {Color, toAdjective} from "../questions/Color";
+import {Animal} from "./Animal";
+import {Color, toAdjective} from "./Color";
 import {initialAnimalQuestion, initialColorQuestion, Question} from "./Question";
-import {Result} from "../types/Result";
+import {Result} from "./Result";
 
 export class Exam {
 

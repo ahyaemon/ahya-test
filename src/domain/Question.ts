@@ -1,5 +1,5 @@
-import {Color} from "../questions/Color";
-import {Animal} from "../questions/Animal";
+import {Color} from "./Color";
+import {Animal} from "./Animal";
 
 export class Question<T> {
 
@@ -7,8 +7,7 @@ export class Question<T> {
         readonly title: string,
         readonly options: T[],
         readonly selected: number | undefined = undefined,
-    ) {
-    }
+    ) {}
 
     static createUnchecked<T>(title: string, options: T[]): Question<T> {
         return new Question(title, options, undefined)

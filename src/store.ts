@@ -1,5 +1,5 @@
 import {createSignal} from "solid-js";
-import {Result} from "./types/Result";
+import {Result} from "./domain/Result";
 import {Exam} from "./domain/Exam";
 
 function createStore() {
