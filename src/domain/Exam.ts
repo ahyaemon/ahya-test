@@ -4,6 +4,7 @@ import {Question} from "./Question";
 import {Result} from "./Result";
 import {initialMovementQuestion, Movement} from "./questions/Movement";
 import {Anxiety, initialAnxietyQuestion} from "./questions/Anxiety";
+import {initialSeasonQuestion, Season} from "./Season";
 
 export class Exam {
 
@@ -12,6 +13,7 @@ export class Exam {
         private readonly colorQuestion: Question<Color>,
         private readonly movementQuestion: Question<Movement>,
         private readonly anxietyQuestion: Question<Anxiety>,
+        private readonly seasonQuestion: Question<Season>,
     ) {}
 
     static init(): Exam {
@@ -20,6 +22,7 @@ export class Exam {
             initialColorQuestion,
             initialMovementQuestion,
             initialAnxietyQuestion,
+            initialSeasonQuestion,
         )
     }
 
@@ -29,6 +32,7 @@ export class Exam {
             questions[1],
             questions[2],
             questions[3],
+            questions[4],
         )
     }
 
@@ -38,6 +42,7 @@ export class Exam {
             this.colorQuestion,
             this.movementQuestion,
             this.anxietyQuestion,
+            this.seasonQuestion,
         ]
     }
 
@@ -84,6 +89,7 @@ export class Exam {
             this.colorQuestion.options[answerIndexes[1]],
             this.movementQuestion.options[answerIndexes[2]],
             this.anxietyQuestion.options[answerIndexes[3]],
+            this.seasonQuestion.options[answerIndexes[4]],
         )
     }
 }

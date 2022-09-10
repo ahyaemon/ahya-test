@@ -2,6 +2,7 @@ import {Animal} from "./questions/Animal";
 import {Color, toAdjective} from "./questions/Color";
 import {Movement} from "./questions/Movement";
 import {Anxiety} from "./questions/Anxiety";
+import {Season} from "./Season";
 
 export class Result {
 
@@ -10,6 +11,7 @@ export class Result {
         readonly color: Color,
         readonly movement: Movement,
         readonly anxiety: Anxiety,
+        readonly season: Season,
     ) {}
 
     get ahyaType(): string {
