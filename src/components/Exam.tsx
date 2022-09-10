@@ -1,5 +1,5 @@
 import {Component, For} from "solid-js";
-import {Question} from "./Question";
+import {QuestionC} from "./QuestionC";
 import classes from "./Exam.module.css";
 import {useNavigate} from "@solidjs/router";
 import {store} from "../store";
@@ -33,8 +33,8 @@ export const Exam: Component = () => {
 
     return (
         <div class={classes.container}>
-            <For each={store.questions}>{ (question, i) =>
-                <Question questionNumber={i() + 1} title={question.title} options={question.options}/>
+            <For each={store.questions()}>{ (question, i) =>
+                <QuestionC questionNumber={i() + 1} question={question}/>
             }</For>
             <button class={classes.submit} onClick={handleSubmit}>回答する</button>
         </div>

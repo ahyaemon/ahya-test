@@ -4,23 +4,19 @@ import {store} from "../store";
 import {toast} from "solid-toast";
 import ojisan from "../assets/ojisan.png";
 import {getRandom, trueByPercent} from "../utils/random";
+import {Question} from "../domain/Question";
+import {templateMessages, messages} from "../messages/messages";
 
 type QuestionProps = {
     questionNumber: number
-    title: string
-    options: string[]
+    question: Question<any>
 }
 
-const messages: string[] = [
-    'へえ、そうなんだ！',
-    '知らなかった！',
-    'マジで？',
-]
-
+// FIXME Question の判定方法が微妙な気がする。引数に Question をとる形にできないか
 function createMessage(questionNumber: number, answer: string): string {
     if (questionNumber === 1 || questionNumber == 2) {
-        if (trueByPercent(30)) {
-            return `僕は${answer}は嫌いだな`
+        if (trueByPercent(70)) {
+            return getRandom(templateMessages).replace('$answer', answer)
         }
     }
 
@@ -38,21 +34,20 @@ function showToast(message: string) {
     })
 }
 
-// FIXME どのオプションがチェックされてるかは上から渡したほうが良いと思う
-export const Question: Component<QuestionProps> = (props) => {
+export const QuestionC: Component<QuestionProps> = ({ questionNumber, question }) => {
 
     const handleClick = (option: string) => {
-        showToast(createMessage(props.questionNumber, option))
-        store.check(props.questionNumber, option)
+        showToast(createMessage(questionNumber, option))
+        store.check(questionNumber, option)
     }
 
     return (
         <div>
-            <div class={classes.title}>Q{props.questionNumber}. {props.title}</div>
+            <div class={classes.title}>Q{questionNumber}. {question.title}</div>
             <div class={classes.optionContainer}>
-                <For each={props.options}>{ (option, i) =>
-                    <div class={classes.optionArea} onClick={ () => handleClick(option)}>
-                        <div class={classes.checkBox}>{store.checked(props.questionNumber, i(), option) ? "✔" : ""}</div>
+                <For each={question.options}>{ option =>
+                    <div class={classes.optionArea} onClick={ () => handleClick(option) }>
+                        <div class={classes.checkBox}>{question.optionChecked(option) ? "✔" : ""}</div>
                         <div class={classes.option}>{option}</div>
                     </div>
                 }</For>
