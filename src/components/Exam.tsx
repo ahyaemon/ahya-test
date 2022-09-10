@@ -33,7 +33,7 @@ export const Exam: Component = () => {
 
     return (
         <div class={classes.container}>
-            <For each={store.questions()}>{ (question, i) =>
+            <For each={store.questions}>{ (question, i) =>
                 <Question questionNumber={i() + 1} title={question.title} options={question.options}/>
             }</For>
             <button class={classes.submit} onClick={handleSubmit}>回答する</button>

@@ -19,6 +19,10 @@ export const ResultPage: Component = () => {
     try {
         result = store.createResultFromAnswerString(params.a)
     } catch (e) {
+        if (e instanceof Error) {
+            console.log(e)
+        }
+
         return (
             <div>
                 <p>何か良く分からないエラー発生！！</p>

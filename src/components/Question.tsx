@@ -38,6 +38,7 @@ function showToast(message: string) {
     })
 }
 
+// FIXME どのオプションがチェックされてるかは上から渡したほうが良いと思う
 export const Question: Component<QuestionProps> = (props) => {
 
     const handleClick = (option: string) => {
