@@ -3,13 +3,15 @@ import {Color, initialColorQuestion} from "./questions/Color";
 import {Question} from "./Question";
 import {Result} from "./Result";
 import {initialMovementQuestion, Movement} from "./questions/Movement";
+import {Anxiety, initialAnxietyQuestion} from "./questions/Anxiety";
 
 export class Exam {
 
     private constructor(
         private readonly animalQuestion: Question<Animal>,
         private readonly colorQuestion: Question<Color>,
-        private readonly movementQuestion: Question<Movement>
+        private readonly movementQuestion: Question<Movement>,
+        private readonly anxietyQuestion: Question<Anxiety>,
     ) {}
 
     static init(): Exam {
@@ -17,6 +19,7 @@ export class Exam {
             initialAnimalQuestion,
             initialColorQuestion,
             initialMovementQuestion,
+            initialAnxietyQuestion,
         )
     }
 
@@ -25,6 +28,7 @@ export class Exam {
             questions[0],
             questions[1],
             questions[2],
+            questions[3],
         )
     }
 
@@ -33,6 +37,7 @@ export class Exam {
             this.animalQuestion,
             this.colorQuestion,
             this.movementQuestion,
+            this.anxietyQuestion,
         ]
     }
 
@@ -78,6 +83,7 @@ export class Exam {
             this.animalQuestion.options[answerIndexes[0]],
             this.colorQuestion.options[answerIndexes[1]],
             this.movementQuestion.options[answerIndexes[2]],
+            this.anxietyQuestion.options[answerIndexes[3]],
         )
     }
 }

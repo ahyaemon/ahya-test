@@ -1,6 +1,7 @@
 import {Animal} from "./questions/Animal";
 import {Color, toAdjective} from "./questions/Color";
 import {Movement} from "./questions/Movement";
+import {Anxiety} from "./questions/Anxiety";
 
 export class Result {
 
@@ -8,13 +9,14 @@ export class Result {
         readonly animal: Animal,
         readonly color: Color,
         readonly movement: Movement,
+        readonly anxiety: Anxiety,
     ) {}
 
     get ahyaType(): string {
         return toAdjective(this.color) + this.animal
     }
 
-    get explanation(): string {
+    get movementExplanation(): string {
         switch (this.movement) {
             case Movement.quit: return `
                 ${this.ahyaType}はあまり動くことを好まず、一日中同じ場所にいることもあります。
@@ -28,6 +30,17 @@ export class Result {
                 ${this.ahyaType}は足が速く、時速200kmで走ることもあると言われています。
                 常に動いていて、何事にも積極的です。
                 ただ、${this.ahyaType}タイプの人は周りから焦っているように見られることもあります。
+            `.trim()
+        }
+    }
+
+    get anxietyExplanation(): string {
+        switch (this.anxiety) {
+            case Anxiety.yes: return `
+                また、人一倍心配になりやすく、些細なことでもなかなか決断ができなかったり、他人の行動を気にしてしまいます。
+            `.trim()
+            case Anxiety.no: return `
+                また、些細なことは気にならない性格で、それによって多少のミスが発生しても前向きであり続けることができます。
             `.trim()
         }
     }

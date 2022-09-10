@@ -38,7 +38,8 @@ export const ResultPage: Component = () => {
             <div style={{ "margin-top": "10px" }}>
                 <div class={`${classes.image} ${animalImageClass(result.animal)} ${animalColorClass(result.color)}`}></div>
             </div>
-            <div style={{ "margin": "20px auto 0 auto", "padding": "10px", "max-width": "400px", "text-align": "justify" }}>{result.explanation}</div>
+            <div style={{ "margin": "20px auto 0 auto", "padding": "0 10px", "max-width": "400px", "text-align": "justify" }}>{result.movementExplanation}</div>
+            <div style={{ "margin": "0px auto 0 auto", "padding": "0 10px", "max-width": "400px", "text-align": "justify" }}>{result.anxietyExplanation}</div>
         </div>
     )
 }
