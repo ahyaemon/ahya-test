@@ -1,6 +1,3 @@
-import {Color} from "./Color";
-import {Animal} from "./Animal";
-
 export class Question<T> {
 
     private constructor(

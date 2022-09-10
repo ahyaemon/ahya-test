@@ -1,4 +1,4 @@
-import {Question} from "./Question";
+import {Question} from "../Question";
 
 export const Animal = {
     dog: '犬',

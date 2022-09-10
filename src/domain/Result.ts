@@ -1,6 +1,6 @@
-import {Animal} from "./Animal";
-import {Color, toAdjective} from "./Color";
-import {Movement} from "./Movement";
+import {Animal} from "./questions/Animal";
+import {Color, toAdjective} from "./questions/Color";
+import {Movement} from "./questions/Movement";
 
 export class Result {
 

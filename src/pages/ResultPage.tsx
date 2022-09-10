@@ -1,9 +1,9 @@
-import {Component, createSignal, onMount, Show} from "solid-js";
+import {Component, onMount} from "solid-js";
 import classes from "./ResultPage.module.css";
 import {store} from "../store";
 import {Result} from "../domain/Result";
-import {Animal} from "../domain/Animal";
-import {Color} from "../domain/Color";
+import {Animal} from "../domain/questions/Animal";
+import {Color} from "../domain/questions/Color";
 import {toast} from "solid-toast";
 import {Link, useSearchParams} from "@solidjs/router";
 

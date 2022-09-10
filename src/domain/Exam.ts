@@ -1,8 +1,8 @@
-import {Animal, initialAnimalQuestion} from "./Animal";
-import {Color, initialColorQuestion} from "./Color";
+import {Animal, initialAnimalQuestion} from "./questions/Animal";
+import {Color, initialColorQuestion} from "./questions/Color";
 import {Question} from "./Question";
 import {Result} from "./Result";
-import {initialMovementQuestion, Movement} from "./Movement";
+import {initialMovementQuestion, Movement} from "./questions/Movement";
 
 export class Exam {
 
