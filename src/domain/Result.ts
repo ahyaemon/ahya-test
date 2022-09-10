@@ -27,7 +27,7 @@ export class Result {
             case Movement.run: return `
                 ${this.ahyaType}は足が速く、時速200kmで走ることもあると言われています。
                 常に動いていて、何事にも積極的です。
-                ただ、${this.ahyaType}タイプの人は周りから焦っていられるように見られることもあります。
+                ただ、${this.ahyaType}タイプの人は周りから焦っているように見られることもあります。
             `.trim()
         }
     }
