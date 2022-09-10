@@ -1,6 +1,6 @@
-import {Animal} from "./Animal";
-import {Color} from "./Color";
-import {initialAnimalQuestion, initialColorQuestion, Question} from "./Question";
+import {Animal, initialAnimalQuestion} from "./Animal";
+import {Color, initialColorQuestion} from "./Color";
+import {Question} from "./Question";
 import {Result} from "./Result";
 
 export class Exam {

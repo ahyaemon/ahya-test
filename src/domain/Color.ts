@@ -1,3 +1,5 @@
+import {Question} from "./Question";
+
 export const Color = {
     red: '赤',
     blue: '青',
@@ -15,3 +17,8 @@ export function toAdjective(color: Color): string {
         case Color.black: return '黒い'
     }
 }
+
+export const initialColorQuestion = Question.createUnchecked(
+    '好きな色は？',
+    [Color.red, Color.blue, Color.green, Color.black],
+)

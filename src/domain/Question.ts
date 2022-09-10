@@ -37,12 +37,5 @@ export class Question<T> {
     }
 }
 
-export const initialAnimalQuestion = Question.createUnchecked(
-    '好きな動物は？',
-    [Animal.dog, Animal.cat, Animal.fox, Animal.rabbit, Animal.gorilla],
-)
 
-export const initialColorQuestion = Question.createUnchecked(
-    '好きな色は？',
-    [Color.red, Color.blue, Color.green, Color.black],
-)
+
