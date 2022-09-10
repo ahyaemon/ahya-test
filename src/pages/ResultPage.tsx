@@ -6,6 +6,8 @@ import {Animal} from "../domain/questions/Animal";
 import {Color} from "../domain/questions/Color";
 import {toast} from "solid-toast";
 import {Link, useSearchParams} from "@solidjs/router";
+import {getRandom} from "../utils/random";
+import {quotes} from "../messages/quote";
 
 export const ResultPage: Component = () => {
 
@@ -31,6 +33,8 @@ export const ResultPage: Component = () => {
         )
     }
 
+    const quote = getRandom(quotes)
+
     return (
         <div class={classes.container}>
             <div>
@@ -41,14 +45,14 @@ export const ResultPage: Component = () => {
                 </div>
             </div>
 
-            <div style={{ "margin-top": "20px" }}>
+            <div style={{ "margin-top": "20px", "padding": "0 10px" }}>
                 <div class={classes.explanation}>{result.movementExplanation}</div>
                 <div class={classes.explanation}>{result.anxietyExplanation}</div>
             </div>
 
             <div class={classes.quote}>
-                <div class={classes.quoteMessage}>おまえは今まで食ったパンの枚数をおぼえているのか？</div>
-                <div class={classes.quoteAuthor}>ディオ・ブランドー</div>
+                <div class={classes.quoteMessage}>{quote.message}</div>
+                <div class={classes.quoteAuthor}>{quote.author}</div>
             </div>
         </div>
     )

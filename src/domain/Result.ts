@@ -3,6 +3,8 @@ import {Color, toAdjective} from "./questions/Color";
 import {Movement} from "./questions/Movement";
 import {Anxiety} from "./questions/Anxiety";
 import {Season} from "./Season";
+import {Quote, quotes} from "../messages/quote";
+import {getRandom} from "../utils/random";
 
 export class Result {
 
@@ -43,5 +45,9 @@ export class Result {
                 また、些細なことは気にならない性格で、それによって多少のミスが発生しても前向きであり続けることができます。
             `.trim()
         }
+    }
+
+    get quote(): Quote {
+        return getRandom(quotes)
     }
 }

@@ -1,9 +1,6 @@
 import {Component} from "solid-js";
 import classes from "./AboutPage.module.css";
 import externalLinkIcon from "../assets/link.png";
-import {Comment} from "../components/Comment";
-import {CommentIcon} from "../types/CommentIcon";
-import {CommentPosition} from "../types/CommentPosition";
 
 export const AboutPage: Component = () => {
     return (
@@ -27,6 +24,8 @@ export const AboutPage: Component = () => {
                 <li>https://www.freeiconspng.com</li>
                 <li>https://freesvg.org</li>
             </ul>
+            <p style={{ "margin-top": "60px" }}>名言</p>
+            <p>ジョジョの奇妙な冒険シリーズ</p>
         </div>
     )
 }
