@@ -3,6 +3,7 @@
     grid-template-rows: 26px 18px;
     grid-template-columns: 50px 200px;
     grid-column-gap: 4px;
+    width: 250px;
 }
 
 .logo {

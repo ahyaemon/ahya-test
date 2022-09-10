@@ -12,15 +12,14 @@ export const Header: Component = () => {
     }
 
     return (
-        <div class={classes.container}>
-            {/* FIXME navigateTop を親要素のみに持たせたい（親の width が画面いっぱいになっちゃうから現状は子供に持たせてる） */}
-            <div class={classes.logo} onClick={navigateTop}>
+        <div class={classes.container} onClick={navigateTop}>
+            <div class={classes.logo}>
                 <img src={logo} alt="logo"/>
             </div>
-            <div class={classes.title} onClick={navigateTop}>
+            <div class={classes.title}>
                 AHYA-TEST
             </div>
-            <div class={classes.subtitle} onClick={navigateTop}>
+            <div class={classes.subtitle}>
                 絶対当たる性格診断
             </div>
         </div>
