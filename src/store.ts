@@ -10,7 +10,7 @@ function createStore() {
     return {
         questions: (): Question<any>[] => exam().questions(),
         checked: (checkNumber: number, i: number, option: string): boolean => exam().checked(checkNumber, option),
-        check: (checkNumber: number, answer: string) => setExam(exam().check(checkNumber, answer)),
+        check: (question: Question<any>, answer: string) => setExam(exam().check(question, answer)),
         createResultFromAnswerString: (params: string): Result => exam().createResultFromAnswerString(params),
         allChecked: (): boolean => exam().allQuestionAnswered(),
         getFirstUncheckedQuestion: (): number | undefined => exam().firstUncheckedQuestionIndex(),

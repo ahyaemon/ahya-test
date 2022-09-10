@@ -38,7 +38,7 @@ export const QuestionC: Component<QuestionProps> = ({ questionNumber, question }
 
     const handleClick = (option: string) => {
         showToast(createMessage(questionNumber, option))
-        store.check(questionNumber, option)
+        store.check(question, option)
     }
 
     return (

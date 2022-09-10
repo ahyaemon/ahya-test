@@ -20,6 +20,14 @@ export class Exam {
         )
     }
 
+    private static initFromArray(questions: Question<any>[]): Exam {
+        return new Exam(
+            questions[0],
+            questions[1],
+            questions[2],
+        )
+    }
+
     questions(): Question<any>[] {
         return [
             this.animalQuestion,
@@ -37,28 +45,11 @@ export class Exam {
         return false
     }
 
-    // FIXME できれば checkNumber じゃなくて question で受け取りたい。questions() を呼び出せばいけるか？
-    check(checkNumber: number, answer: any): Exam {
-        if (checkNumber === 1) {
-            return new Exam(
-                this.animalQuestion.check(answer),
-                this.colorQuestion,
-                this.movementQuestion,
-            )
-        } else if (checkNumber === 2) {
-            return new Exam(
-                this.animalQuestion,
-                this.colorQuestion.check(answer),
-                this.movementQuestion,
-            )
-        } else if (checkNumber === 3) {
-            return new Exam(
-                this.animalQuestion,
-                this.colorQuestion,
-                this.movementQuestion.check(answer),
-            )
-        }
-        return this
+    check(question: Question<any>, answer: any): Exam {
+        const newQuestions = this.questions().map(q => {
+            return (q === question) ? q.check(answer) : q
+        })
+        return Exam.initFromArray(newQuestions)
     }
 
     allQuestionAnswered(): boolean {
