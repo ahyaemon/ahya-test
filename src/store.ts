@@ -1,11 +1,8 @@
 import {createSignal} from "solid-js";
-import {Question} from "./questions/Question";
-import {animalQuestion} from "./questions/Animal";
-import {colorQuestion} from "./questions/Color";
 import {Result} from "./types/Result";
 import {Exam} from "./domain/Exam";
 
-function createStore(_questions: Question<any>[]) {
+function createStore() {
 
     const [exam, setExam] = createSignal<Exam>(Exam.init())
 
@@ -20,7 +17,4 @@ function createStore(_questions: Question<any>[]) {
     }
 }
 
-export const store = createStore([
-    animalQuestion,
-    colorQuestion,
-])
+export const store = createStore()

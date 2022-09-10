@@ -1,5 +1,3 @@
-import {createQuestion} from "./Question";
-
 export const Color = {
     red: '赤',
     blue: '青',
@@ -8,11 +6,6 @@ export const Color = {
 } as const
 
 export type Color = typeof Color[keyof typeof Color]
-
-export const colorQuestion = createQuestion(
-    '好きな色は？',
-    [Color.red, Color.blue, Color.green, Color.black]
-)
 
 export function toAdjective(color: Color): string {
     switch (color) {
