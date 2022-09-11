@@ -45,7 +45,7 @@ export const ResultPage: Component = () => {
                 </div>
             </div>
 
-            <div style={{ "margin-top": "20px", "padding": "0 10px" }}>
+            <div style={{ "margin-top": "60px", "padding": "0 20px" }}>
                 <div class={classes.explanation}>{result.movementExplanation}</div>
                 <div class={classes.explanation}>{result.anxietyExplanation}</div>
             </div>
