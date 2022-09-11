@@ -3,7 +3,7 @@ import classes from "./Question.module.css";
 import {store} from "../store";
 import {toast} from "solid-toast";
 import ojisan from "../assets/ojisan.png";
-import {getRandom, trueByPercent} from "../utils/random";
+import {getRandom} from "../utils/random";
 import {Question} from "../domain/Question";
 import {templateMessages, messages} from "../messages/messages";
 
@@ -13,11 +13,10 @@ type QuestionProps = {
 }
 
 // FIXME Question の判定方法が微妙な気がする。引数に Question をとる形にできないか
+// Question クラス自体に回答を返すメソッドをつければいける？
 function createMessage(questionNumber: number, answer: string): string {
-    if (questionNumber === 1 || questionNumber == 2) {
-        if (trueByPercent(70)) {
-            return getRandom(templateMessages).replace('$answer', answer)
-        }
+    if ([1, 2, 5].includes(questionNumber)) {
+        return getRandom(templateMessages).replace('$answer', answer)
     }
 
     return getRandom(messages)
