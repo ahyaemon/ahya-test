@@ -14,6 +14,7 @@ export class Result {
         readonly movement: Movement,
         readonly anxiety: Anxiety,
         readonly season: Season,
+        readonly quote: Quote,
     ) {}
 
     get ahyaType(): string {
@@ -45,9 +46,5 @@ export class Result {
                 また、些細なことは気にならない性格で、それによって多少のミスが発生しても前向きであり続けることができます。
             `.trim()
         }
-    }
-
-    get quote(): Quote {
-        return getRandom(quotes)
     }
 }

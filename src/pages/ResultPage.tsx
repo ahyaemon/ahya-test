@@ -33,8 +33,6 @@ export const ResultPage: Component = () => {
         )
     }
 
-    const quote = getRandom(quotes)
-
     return (
         <div class={classes.container}>
             <div>
@@ -51,8 +49,8 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.quote}>
-                <div class={classes.quoteMessage}>{quote.message}</div>
-                <div class={classes.quoteAuthor}>{quote.author}</div>
+                <div class={classes.quoteMessage}>{result.quote.message}</div>
+                <div class={classes.quoteAuthor}>{result.quote.author}</div>
             </div>
         </div>
     )

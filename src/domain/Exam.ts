@@ -5,6 +5,8 @@ import {Result} from "./Result";
 import {initialMovementQuestion, Movement} from "./questions/Movement";
 import {Anxiety, initialAnxietyQuestion} from "./questions/Anxiety";
 import {initialSeasonQuestion, Season} from "./Season";
+import {getRandom} from "../utils/random";
+import {quotes} from "../messages/quote";
 
 export class Exam {
 
@@ -84,12 +86,16 @@ export class Exam {
             throw Error(`invalid query params length. expected: ${this.questions().length}, actual: ${answerIndexes.length}`)
         }
 
+        // FIXME ランダムじゃなくて固定する（やり方要検討）
+        const quote = getRandom(quotes)
+
         return new Result(
             this.animalQuestion.options[answerIndexes[0]],
             this.colorQuestion.options[answerIndexes[1]],
             this.movementQuestion.options[answerIndexes[2]],
             this.anxietyQuestion.options[answerIndexes[3]],
             this.seasonQuestion.options[answerIndexes[4]],
+            quote,
         )
     }
 }
