@@ -8,6 +8,7 @@ import {initialSeasonQuestion, Season} from "./Season";
 import {Quote, quotes} from "../messages/quote";
 import {sum} from "../utils/number";
 import {Feeling, initialFeelingQuestion} from "./questions/Feeling";
+import {Importance, initialImportanceQuestion} from "./questions/Importance";
 
 export class Exam {
 
@@ -18,6 +19,7 @@ export class Exam {
         private readonly anxietyQuestion: Question<Anxiety>,
         private readonly seasonQuestion: Question<Season>,
         private readonly feelingQuestion: Question<Feeling>,
+        private readonly importanceQuestion: Question<Importance>,
     ) {}
 
     static init(): Exam {
@@ -28,6 +30,7 @@ export class Exam {
             initialAnxietyQuestion,
             initialSeasonQuestion,
             initialFeelingQuestion,
+            initialImportanceQuestion,
         )
     }
 
@@ -39,6 +42,7 @@ export class Exam {
             questions[3],
             questions[4],
             questions[5],
+            questions[6],
         )
     }
 
@@ -50,6 +54,7 @@ export class Exam {
             this.anxietyQuestion,
             this.seasonQuestion,
             this.feelingQuestion,
+            this.importanceQuestion,
         ]
     }
 
@@ -89,7 +94,8 @@ export class Exam {
             this.anxietyQuestion.options[answerIndexes[3]],
             this.seasonQuestion.options[answerIndexes[4]],
             this.feelingQuestion.options[answerIndexes[5]],
-            getQuote(answerIndexes)
+            this.importanceQuestion.options[answerIndexes[6]],
+            getQuote(answerIndexes),
         )
     }
 }
