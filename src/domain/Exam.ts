@@ -53,15 +53,6 @@ export class Exam {
         ]
     }
 
-    checked(checkNumber: number, option: any): boolean {
-        if (checkNumber === 1) {
-            return this.animalQuestion.optionChecked(option)
-        } else if (checkNumber === 2) {
-            return this.colorQuestion.optionChecked(option)
-        }
-        return false
-    }
-
     check(question: Question<any>, answer: any): Exam {
         const newQuestions = this.questions().map(q => {
             return (q === question) ? q.check(answer) : q
