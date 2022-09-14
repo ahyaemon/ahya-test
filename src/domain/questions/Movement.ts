@@ -1,4 +1,5 @@
 import {Question} from "../Question";
+import {messages} from "../../messages/messages";
 
 export const Movement = {
     walk: '歩く',
@@ -11,4 +12,5 @@ export type Movement = typeof Movement[keyof typeof Movement]
 export const initialMovementQuestion = Question.createUnchecked(
     '近場に行く時は',
     [Movement.walk, Movement.run, Movement.quit],
+    messages,
 )
