@@ -7,6 +7,7 @@ import {Quote} from "../messages/quote";
 import {Feeling} from "./questions/Feeling";
 import {Importance} from "./questions/Importance";
 import {Friend} from "./questions/Friend";
+import {Working} from "./questions/Working";
 
 export class Result {
 
@@ -19,6 +20,7 @@ export class Result {
         readonly feeling: Feeling,
         readonly importance: Importance,
         readonly friend: Friend,
+        readonly working: Working,
         readonly quote: Quote,
     ) {}
 

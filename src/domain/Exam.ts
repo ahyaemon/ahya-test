@@ -10,6 +10,7 @@ import {sum} from "../utils/number";
 import {Feeling, initialFeelingQuestion} from "./questions/Feeling";
 import {Importance, initialImportanceQuestion} from "./questions/Importance";
 import {Friend, initialFriendQuestion} from "./questions/Friend";
+import {initialWorkingQuestion, Working} from "./questions/Working";
 
 export class Exam {
 
@@ -22,6 +23,7 @@ export class Exam {
         private readonly feelingQuestion: Question<Feeling>,
         private readonly importanceQuestion: Question<Importance>,
         private readonly friendQuestion: Question<Friend>,
+        private readonly workingQuestion: Question<Working>,
     ) {}
 
     static init(): Exam {
@@ -34,6 +36,7 @@ export class Exam {
             initialFeelingQuestion,
             initialImportanceQuestion,
             initialFriendQuestion,
+            initialWorkingQuestion,
         )
     }
 
@@ -47,6 +50,7 @@ export class Exam {
             questions[5],
             questions[6],
             questions[7],
+            questions[8],
         )
     }
 
@@ -60,6 +64,7 @@ export class Exam {
             this.feelingQuestion,
             this.importanceQuestion,
             this.friendQuestion,
+            this.workingQuestion,
         ]
     }
 
@@ -101,6 +106,7 @@ export class Exam {
             this.feelingQuestion.options[answerIndexes[5]],
             this.importanceQuestion.options[answerIndexes[6]],
             this.friendQuestion.options[answerIndexes[7]],
+            this.workingQuestion.options[answerIndexes[8]],
             getQuote(answerIndexes),
         )
     }
