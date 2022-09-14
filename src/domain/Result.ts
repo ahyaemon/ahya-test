@@ -54,4 +54,58 @@ export class Result {
             `.trim()
         }
     }
+
+    get seasonExplanation(): string {
+        const pre = `${this.ahyaType}タイプの人には${this.season}が好きな人が多く、`
+        switch (this.season) {
+            case Season.spring: return pre + `
+                桜や緑などの自然、新しく始まる生活などに魅力を感じます。
+            `.trim()
+            case Season.summer: return pre + `
+                海や夏祭りに魅力を感じたり、セミの声に郷愁を覚えたりします。
+            `.trim()
+            case Season.autumn: return pre + `
+                ススキやコスモス、紅葉などの自然、他にも栗やさつまいもなどの食べ物、またハロウィンなどのイベントに魅力を感じます。
+            `.trim()
+            case Season.winter: return pre + `
+                基本的に全員雪が好きです。
+            `.trim()
+        }
+    }
+
+    get feelingExplanation(): string {
+        switch (this.feeling) {
+            case Feeling.yes: return `気分屋でもあるので、季節によらずその日のイベントや出来事にも気持ちが左右されます。`
+            case Feeling.no: return ``
+        }
+    }
+
+    get importanceExplanation(): string {
+        const pre = `
+            ${this.ahyaType}タイプの人が人生で最も重視するものは${this.importance}です。
+            ${this.importance}さえあれば他に何も要らないと思っている人もいます。
+        `.trim()
+        switch (this.importance) {
+            case Importance.money: return pre + `
+            `.trim()
+            case Importance.family: return pre + `
+            `.trim()
+            case Importance.love: return pre + `
+            `.trim()
+            case Importance.talent: return pre + `
+            `.trim()
+            case Importance.noting: return `
+                ${this.ahyaType}タイプの人は、人生において何一つ重要なものは無いと考えています。
+            `.trim()
+
+        }
+    }
+
+    get pros(): string {
+        return `長所は特にありません`
+    }
+
+    get cons(): string {
+        return `短所は特にありません`
+    }
 }

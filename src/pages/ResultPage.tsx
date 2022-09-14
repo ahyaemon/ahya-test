@@ -6,8 +6,6 @@ import {Animal} from "../domain/questions/Animal";
 import {Color} from "../domain/questions/Color";
 import {toast} from "solid-toast";
 import {Link, useSearchParams} from "@solidjs/router";
-import {getRandom} from "../utils/random";
-import {quotes} from "../messages/quote";
 
 export const ResultPage: Component = () => {
 
@@ -43,7 +41,11 @@ export const ResultPage: Component = () => {
                 </div>
             </div>
 
-            <div style={{ "margin-top": "60px", "padding": "0 20px" }}>
+            <div class={classes.h2} style={{ "margin-top": "60px", "padding": "0 20px" }}>
+                {result.ahyaType}タイプの特徴
+            </div>
+
+            <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
                 <div class={classes.explanation}>{result.movementExplanation}</div>
                 <div class={classes.explanation}>{result.anxietyExplanation}</div>
             </div>
@@ -51,6 +53,27 @@ export const ResultPage: Component = () => {
             <div class={classes.quote}>
                 <div class={classes.quoteMessage}>{result.quote.message}</div>
                 <div class={classes.quoteAuthor}>{result.quote.author}</div>
+            </div>
+
+            <div style={{ "margin-top": "20px", "padding": "0 20px" }}>
+                <div class={classes.explanation}>{result.seasonExplanation}{result.feelingExplanation}</div>
+                <div class={classes.explanation}>{result.importanceExplanation}</div>
+            </div>
+
+            <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
+                {result.ahyaType}タイプの長所
+            </div>
+
+            <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
+                <div class={classes.explanation}>{result.pros}</div>
+            </div>
+
+            <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
+                {result.ahyaType}タイプの短所
+            </div>
+
+            <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
+                <div class={classes.explanation}>{result.cons}</div>
             </div>
         </div>
     )

@@ -45,6 +45,10 @@
     mask-image: url(../assets/rabbit.png);
 }
 
+.h2 {
+    font-size: 20px;
+}
+
 .explanation {
     margin: 0 auto;
     max-width: 400px;
