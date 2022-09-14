@@ -42,7 +42,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "60px", "padding": "0 20px" }}>
-                {result.ahyaType}タイプの特徴
+                &#128065; {result.ahyaType}タイプの特徴
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
@@ -61,7 +61,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
-                {result.ahyaType}タイプの長所
+                &#128578; {result.ahyaType}タイプの長所
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
@@ -70,7 +70,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
-                {result.ahyaType}タイプの短所
+                &#128542; {result.ahyaType}タイプの短所
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
@@ -79,7 +79,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
-                {result.ahyaType}タイプの人へのアドバイス
+                &#127808; {result.ahyaType}タイプの人へのアドバイス
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
