@@ -3,8 +3,8 @@ import {Color, toAdjective} from "./questions/Color";
 import {Movement} from "./questions/Movement";
 import {Anxiety} from "./questions/Anxiety";
 import {Season} from "./Season";
-import {Quote, quotes} from "../messages/quote";
-import {getRandom} from "../utils/random";
+import {Quote} from "../messages/quote";
+import {Feeling} from "./questions/Feeling";
 
 export class Result {
 
@@ -14,6 +14,7 @@ export class Result {
         readonly movement: Movement,
         readonly anxiety: Anxiety,
         readonly season: Season,
+        readonly feeling: Feeling,
         readonly quote: Quote,
     ) {}
 
