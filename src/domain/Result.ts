@@ -101,11 +101,52 @@ export class Result {
         }
     }
 
-    get pros(): string {
-        return `長所は特にありません`
+    get prosOfFriend(): string {
+        switch (this.friend) {
+            case Friend.yes: return `
+                誰とでもすぐに仲良くなれるため、広い人脈を持っています。
+                さまざまなことにチャレンジする好奇心も持ち合わせています。
+            `.trim()
+            case Friend.no: return `
+                警戒心が強く、危険な人や物から遠ざかろうとします。
+                友達は少ないですが、深い関係を築いていくことができます。
+            `.trim()
+        }
     }
 
-    get cons(): string {
-        return `短所は特にありません`
+    get consOfFriend(): string {
+        switch (this.friend) {
+            case Friend.yes: return `
+                広く浅い友好関係を築きがちです。
+                八方美人なところもあるため、いざと言う時に頼れる人が少ないかもしれません。
+            `.trim()
+            case Friend.no: return `
+                緊張しやすい性格のため、一歩を踏み出せないことがあります。
+            `.trim()
+        }
+    }
+
+    get propsOfWorking(): string {
+        switch (this.working) {
+            case Working.yes: return `
+                また、協調性があり、${this.friend === Friend.no ? '実は' : ''}大人数での作業が得意なのも特徴です。
+                ${this.ahyaType}タイプの人は組織のリーダーにも多く見られます。
+            `.trim()
+            case Working.no: return `
+                また、他人に頼らず一人で物事を成し遂げること${this.friend === Friend.yes ? 'も' : 'が'}得意で、
+                いつの間にか凄まじい成果を発揮していることもあります。
+            `.trim()
+        }
+    }
+
+    get consOfWorking(): string {
+        switch (this.working) {
+            case Working.yes: return `
+                人に頼りがちなところもあり、いざ一人で何かを成し遂げようとした時に、何から初めて良いのか分からないこともあります。
+            `.trim()
+            case Working.no: return `
+                大人数での作業が苦手なため、チームで仕事をする時にストレスを感じるかも多いようです。
+            `.trim()
+        }
     }
 }

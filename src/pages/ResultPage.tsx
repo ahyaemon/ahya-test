@@ -65,7 +65,8 @@ export const ResultPage: Component = () => {
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
-                <div class={classes.explanation}>{result.pros}</div>
+                <div class={classes.explanation}>{result.prosOfFriend}</div>
+                <div class={classes.explanation}>{result.propsOfWorking}</div>
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
@@ -73,7 +74,16 @@ export const ResultPage: Component = () => {
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
-                <div class={classes.explanation}>{result.cons}</div>
+                <div class={classes.explanation}>{result.consOfFriend}</div>
+                <div class={classes.explanation}>{result.consOfWorking}</div>
+            </div>
+
+            <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
+                {result.ahyaType}タイプの人へのアドバイス
+            </div>
+
+            <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
+                <div class={classes.explanation}>{result.ahyaType}タイプの人に言えることはただ一つ。この性格診断を間に受けないことです。</div>
             </div>
         </div>
     )
