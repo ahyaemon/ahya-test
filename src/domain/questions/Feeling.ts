@@ -1,13 +1,7 @@
-import {Question} from "../Question";
+import {createYesNoQuestion, YesNo} from "./YesNo";
 
-export const Feeling = {
-    yes: 'はい',
-    no: 'いいえ',
-} as const
+export const Feeling = YesNo
 
-export type Feeling = typeof Feeling[keyof typeof Feeling]
+export type Feeling = YesNo
 
-export const initialFeelingQuestion = Question.createUnchecked(
-    '気分屋さんである',
-    [Feeling.yes, Feeling.no],
-)
+export const initialFeelingQuestion = createYesNoQuestion('気分屋さんである')
