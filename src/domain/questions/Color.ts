@@ -1,5 +1,5 @@
 import {Question} from "../Question";
-import {templateMessages} from "../../messages/messages";
+import {getReplacedTemplateMessage} from "../../messages/messages";
 
 export const Color = {
     red: '赤',
@@ -22,5 +22,5 @@ export function toAdjective(color: Color): string {
 export const initialColorQuestion = Question.createUnchecked(
     '好きな色は？',
     [Color.red, Color.blue, Color.green, Color.black],
-    templateMessages,
+    option => getReplacedTemplateMessage(option),
 )

@@ -2,7 +2,7 @@ import {Animal} from "./questions/Animal";
 import {Color, toAdjective} from "./questions/Color";
 import {Movement} from "./questions/Movement";
 import {Anxiety} from "./questions/Anxiety";
-import {Season} from "./Season";
+import {Season} from "./questions/Season";
 import {Quote} from "../messages/quote";
 import {Feeling} from "./questions/Feeling";
 import {Importance} from "./questions/Importance";

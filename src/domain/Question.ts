@@ -1,16 +1,14 @@
-import {getRandom} from "../utils/random";
-
 export class Question<T> {
 
     private constructor(
         readonly title: string,
         readonly options: T[],
         readonly selected: number | undefined = undefined,
-        readonly comments: string[],
+        readonly getComment: (options: T) => string,
     ) {}
 
-    static createUnchecked<T>(title: string, options: T[], comments: string[]): Question<T> {
-        return new Question(title, options, undefined, comments)
+    static createUnchecked<T>(title: string, options: T[], getComment: (options: T) => string): Question<T> {
+        return new Question(title, options, undefined, getComment)
     }
 
     optionChecked(option: T): boolean {
@@ -22,7 +20,7 @@ export class Question<T> {
 
     check(option: T): Question<T> {
         const selected = this.options.indexOf(option)
-        return new Question(this.title, this.options, selected, this.comments)
+        return new Question(this.title, this.options, selected, this.getComment)
     }
 
     answered(): boolean {
@@ -37,7 +35,6 @@ export class Question<T> {
     }
 
     comment(answer: T): string {
-        const comment = getRandom(this.comments)
-        return comment.replace('$answer', answer as string)
+        return this.getComment(answer)
     }
 }

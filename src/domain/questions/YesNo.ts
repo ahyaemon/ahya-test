@@ -1,5 +1,4 @@
 import {Question} from "../Question";
-import {messages} from "../../messages/messages";
 
 export const YesNo = {
     yes: 'はい',
@@ -8,10 +7,10 @@ export const YesNo = {
 
 export type YesNo = typeof YesNo[keyof typeof YesNo]
 
-export function createYesNoQuestion(title: string): Question<YesNo> {
+export function createYesNoQuestion(title: string, getComment: () => string): Question<YesNo> {
     return Question.createUnchecked(
         title,
         [YesNo.yes, YesNo.no],
-        messages,
+        getComment,
     )
 }

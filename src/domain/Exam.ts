@@ -4,7 +4,7 @@ import {Question} from "./Question";
 import {Result} from "./Result";
 import {initialMovementQuestion, Movement} from "./questions/Movement";
 import {Anxiety, initialAnxietyQuestion} from "./questions/Anxiety";
-import {initialSeasonQuestion, Season} from "./Season";
+import {initialSeasonQuestion, Season} from "./questions/Season";
 import {Quote, quotes} from "../messages/quote";
 import {sum} from "../utils/number";
 import {Feeling, initialFeelingQuestion} from "./questions/Feeling";
