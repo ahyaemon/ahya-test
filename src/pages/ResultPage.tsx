@@ -103,6 +103,7 @@ function animalColorClass(color: Color): string {
     switch (color) {
         case Color.red: return classes.red
         case Color.blue: return classes.blue
+        case Color.yellow: return classes.yellow
         case Color.green: return classes.green
         case Color.black: return classes.black
     }
