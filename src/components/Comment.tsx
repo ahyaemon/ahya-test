@@ -1,7 +1,7 @@
-import {Component, Match, Switch} from "solid-js";
-import obasan from "../assets/obasan.png";
-import ojisan from "../assets/ojisan.png";
-import musume from "../assets/musume.png";
+import {Component} from "solid-js";
+import obasan from "../assets/obasan.webp";
+import ojisan from "../assets/ojisan.webp";
+import musume from "../assets/musume.webp";
 import classes from "./Comment.module.css";
 import {CommentIcon} from "../types/CommentIcon";
 import {CommentPosition} from "../types/CommentPosition";

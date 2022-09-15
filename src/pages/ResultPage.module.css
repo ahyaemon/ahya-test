@@ -22,28 +22,28 @@
 .black { background-color: black; }
 
 .gorilla {
-    -webkit-mask-image: url(../assets/gorilla.png);
-    mask-image: url(../assets/gorilla.png);
+    -webkit-mask-image: url(../assets/gorilla.webp);
+    mask-image: url(../assets/gorilla.webp);
 }
 
 .cat {
-    -webkit-mask-image: url(../assets/cat.png);
-    mask-image: url(../assets/cat.png);
+    -webkit-mask-image: url(../assets/cat.webp);
+    mask-image: url(../assets/cat.webp);
 }
 
 .dog {
-    -webkit-mask-image: url(../assets/dog.png);
-    mask-image: url(../assets/dog.png);
+    -webkit-mask-image: url(../assets/dog.webp);
+    mask-image: url(../assets/dog.webp);
 }
 
 .fox {
-    -webkit-mask-image: url(../assets/fox.png);
-    mask-image: url(../assets/fox.png);
+    -webkit-mask-image: url(../assets/fox.webp);
+    mask-image: url(../assets/fox.webp);
 }
 
 .rabbit {
-    -webkit-mask-image: url(../assets/rabbit.png);
-    mask-image: url(../assets/rabbit.png);
+    -webkit-mask-image: url(../assets/rabbit.webp);
+    mask-image: url(../assets/rabbit.webp);
 }
 
 .h2 {

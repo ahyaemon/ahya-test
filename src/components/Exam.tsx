@@ -4,7 +4,7 @@ import classes from "./Exam.module.css";
 import {useNavigate} from "@solidjs/router";
 import {store} from "../store";
 import {toast} from "solid-toast";
-import ojisan from "../assets/ojisan.png";
+import ojisan from "../assets/ojisan.webp";
 
 function showToast(message: string) {
     toast.dismiss()
@@ -13,7 +13,7 @@ function showToast(message: string) {
         style: {
             'background-color': '#ffdddd'
         },
-        icon: <img src={ojisan} class={classes.icon}/>
+        icon: <img src={ojisan} alt="ojisan" class={classes.icon}/>
     })
 }
 

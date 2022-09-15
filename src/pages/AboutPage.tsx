@@ -1,6 +1,6 @@
 import {Component} from "solid-js";
 import classes from "./AboutPage.module.css";
-import externalLinkIcon from "../assets/link.png";
+import externalLinkIcon from "../assets/link.webp";
 
 export const AboutPage: Component = () => {
     return (

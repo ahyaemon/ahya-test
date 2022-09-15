@@ -2,7 +2,7 @@ import {Component, For} from "solid-js";
 import classes from "./Question.module.css";
 import {store} from "../store";
 import {toast} from "solid-toast";
-import ojisan from "../assets/ojisan.png";
+import ojisan from "../assets/ojisan.webp";
 import {Question} from "../domain/Question";
 
 type QuestionProps = {

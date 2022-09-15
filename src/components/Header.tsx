@@ -1,5 +1,5 @@
 import {Component} from "solid-js";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import classes from "./Header.module.css";
 import {useNavigate} from "@solidjs/router";
 
