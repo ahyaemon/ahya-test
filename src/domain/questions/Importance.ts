@@ -16,7 +16,7 @@ export const initialImportanceQuestion = Question.createUnchecked(
     [Importance.family, Importance.money, Importance.love, Importance.talent, Importance.noting],
     option => {
         switch (option) {
-            case Importance.noting: return 'まじ？要らないの？'
+            case Importance.noting: return 'まじ？何も要らないの？'
             case Importance.family: return 'まあ家族は大事だわな'
             case Importance.money: return '金に溺れるなよ！'
             case Importance.love: return '愛こそ全て！'
