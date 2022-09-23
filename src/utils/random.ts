@@ -1,7 +1,8 @@
 /**
- * ar の中からランダムで一つ取得する
+ * Get one at random from ar.
  *
- * 直前の値と同じものは出さない（やりかたは適当）
+ * The same value as the previous one is not chosen.
+ * (the way to do it is appropriate)
  */
 let recently: number = -1
 export function getRandom<T>(ar: T[]) : T {
@@ -20,7 +21,7 @@ export function getRandom<T>(ar: T[]) : T {
 }
 
 /**
- * n% の確率で true を返す
+ * Return true with n% probability
  * @param n
  */
 export function trueByPercent(n: number): boolean {

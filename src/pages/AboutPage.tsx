@@ -19,14 +19,14 @@ export const AboutPage: Component = () => {
                     <img src={externalLinkIcon} alt="external link to github" class={classes.externalLinkIcon}/>
                 </a>
             </p>
-            <p style={{ "margin-top": "60px" }}>お借りした画像</p>
+            <p style={{ "margin-top": "60px" }}>{t('borrowedImages')}</p>
             <ul>
                 <li>https://www.flaticon.com</li>
                 <li>https://www.freeiconspng.com</li>
                 <li>https://freesvg.org</li>
             </ul>
-            <p style={{ "margin-top": "60px" }}>名言</p>
-            <p>ジョジョの奇妙な冒険シリーズ</p>
+            <p style={{ "margin-top": "60px" }}>{t('quote')}</p>
+            <p>{t('jojo')}</p>
         </div>
     )
 }

@@ -6,7 +6,7 @@ export const Friend = YesNo
 export type Friend = YesNo
 
 export const initialFriendQuestion = createYesNoQuestion(
-    '初対面でもすぐに仲良くなれる',
+    'friendQuestion',
     option => {
         switch (option) {
             case Friend.yes: return getRandom(['コミュ力の化け物！', 'うらやましい'])

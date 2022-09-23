@@ -1,28 +1,29 @@
 import {Question} from "../Question";
 import {getReplacedTemplateMessage} from "../../messages/messages";
+import {t} from "../../i18n/i18nStore";
 
 export const Color = {
-    red: '赤',
-    blue: '青',
-    yellow: '黄色',
-    green: '緑',
-    black: '黒',
+    red: 'red',
+    blue: 'blue',
+    yellow: 'yellow',
+    green: 'green',
+    black: 'black',
 } as const
 
 export type Color = typeof Color[keyof typeof Color]
 
 export function toAdjective(color: Color): string {
     switch (color) {
-        case Color.red: return '赤い'
-        case Color.blue: return '青い'
-        case Color.yellow: return '黄色い'
-        case Color.green: return '緑の'
-        case Color.black: return '黒い'
+        case Color.red: return t("redAdjective")
+        case Color.blue: return t("blueAdjective")
+        case Color.yellow: return t("yellowAdjective")
+        case Color.green: return t("greenAdjective")
+        case Color.black: return t("blackAdjective")
     }
 }
 
 export const initialColorQuestion = Question.createUnchecked(
-    '好きな色は？',
+    'colorQuestion',
     [Color.red, Color.blue, Color.yellow, Color.green, Color.black],
     option => getReplacedTemplateMessage(option),
 )

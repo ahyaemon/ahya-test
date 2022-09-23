@@ -5,6 +5,7 @@ import {useNavigate} from "@solidjs/router";
 import {store} from "../store";
 import {toast} from "solid-toast";
 import ojisan from "../assets/ojisan.webp";
+import {t} from "../i18n/i18nStore";
 
 function showToast(message: string) {
     toast.dismiss()
@@ -28,7 +29,7 @@ export const Exam: Component = () => {
             return
         }
 
-        showToast(`Q${unchecked + 1} 回答してなくない？`)
+        showToast(t("notAnswered", `Q${unchecked + 1}`))
     }
 
     return (
@@ -36,7 +37,7 @@ export const Exam: Component = () => {
             <For each={store.questions()}>{ (question, i) =>
                 <QuestionC questionNumber={i() + 1} question={question}/>
             }</For>
-            <button class={classes.submit} onClick={handleSubmit}>回答する</button>
+            <button class={classes.submit} onClick={handleSubmit}>{t("answer")}</button>
         </div>
     )
 }

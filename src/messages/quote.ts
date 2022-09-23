@@ -1,43 +1,45 @@
+import {I18nKey} from "../i18n/i18n";
+
 export type Quote = {
-    message: string
-    author: string
+    message: I18nKey
+    author: I18nKey
 }
 
-function createQuote(message: string, author: string): Quote {
+function createQuote(message: I18nKey, author: I18nKey): Quote {
     return { message, author }
 }
 
 export const quotes: Quote[] = [
     createQuote(
-        'おまえは今まで食ったパンの枚数をおぼえているのか？',
-        'ジョジョ一部：ディオ・ブランドー',
+        'quote1',
+        'quote1Author',
     ),
     createQuote(
-        '人間は誰でも不安や恐怖を克服して安心を得るために生きる',
-        'ジョジョ三部：ディオ・ブランドー',
+        'quote2',
+        'quote2Author',
     ),
     createQuote(
-        'だが断る',
-        'ジョジョ四部：岸辺露伴',
+        'quote3',
+        'quote3Author',
     ),
     createQuote(
-        'なるほど完璧な作戦っスねーっ 不可能だという点に目をつぶればよぉ〜',
-        'ジョジョ四部：東方仗助',
+        'quote4',
+        'quote4Author',
     ),
     createQuote(
-        '吐き気をもよおす『邪悪』とはッ！ なにも知らぬ無知なる者を利用する事だ……!!',
-        'ジョジョ五部：ブローノ・ブチャラティ',
+        'quote5',
+        'quote5Author',
     ),
     createQuote(
-        '大切なのは『真実に向かおうとする意志』だと思っている。',
-        'ジョジョ五部：アバッキオの元同僚の警官',
+        'quote6',
+        'quote6Author',
     ),
     createQuote(
-        'おまえは……自分が『悪』だと気づいていない…もっともドス黒い『悪』だ…',
-        'ジョジョ六部：ウェザー・リポート',
+        'quote7',
+        'quote7Author',
     ),
     createQuote(
-        '『一番の近道は遠回りだった』『遠回りこそが俺の最短の道だった』',
-        'ジョジョ七部：ジャイロ・ツェペリ',
+        'quote8',
+        'quote8Author',
     ),
 ]

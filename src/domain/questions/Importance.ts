@@ -2,21 +2,21 @@ import {Question} from "../Question";
 import {getReplacedTemplateMessage} from "../../messages/messages";
 
 export const Importance = {
-    family: '家族',
-    money: 'お金',
-    love: '愛',
-    talent: '才能',
-    noting: '全て不要',
+    family: 'family',
+    money: 'money',
+    love: 'love',
+    talent: 'talent',
+    nothing: 'nothing',
 } as const
 
 export type Importance = typeof Importance[keyof typeof Importance]
 
 export const initialImportanceQuestion = Question.createUnchecked(
-    '次のうち人生で一番大切だと思うものはどれ？',
-    [Importance.family, Importance.money, Importance.love, Importance.talent, Importance.noting],
+    'importanceQuestion',
+    [Importance.family, Importance.money, Importance.love, Importance.talent, Importance.nothing],
     option => {
         switch (option) {
-            case Importance.noting: return 'まじ？何も要らないの？'
+            case Importance.nothing: return 'まじ？何も要らないの？'
             case Importance.family: return 'まあ家族は大事だわな'
             case Importance.money: return '金に溺れるなよ！'
             case Importance.love: return '愛こそ全て！'

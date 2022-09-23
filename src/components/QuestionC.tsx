@@ -4,6 +4,7 @@ import {store} from "../store";
 import {toast} from "solid-toast";
 import ojisan from "../assets/ojisan.webp";
 import {Question} from "../domain/Question";
+import {t} from "../i18n/i18nStore";
 
 type QuestionProps = {
     questionNumber: number
@@ -30,12 +31,12 @@ export const QuestionC: Component<QuestionProps> = ({ questionNumber, question }
 
     return (
         <div>
-            <div class={classes.title}>Q{questionNumber}. {question.title}</div>
+            <div class={classes.title}>Q{questionNumber}. {t(question.title)}</div>
             <div class={classes.optionContainer}>
                 <For each={question.options}>{ option =>
                     <div class={classes.optionArea} onClick={ () => handleClick(option) }>
                         <div class={classes.checkBox}>{question.optionChecked(option) ? "✔" : ""}</div>
-                        <div class={classes.option}>{option}</div>
+                        <div class={classes.option}>{t(option)}</div>
                     </div>
                 }</For>
             </div>

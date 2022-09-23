@@ -1,4 +1,4 @@
-import {Animal} from "./questions/Animal";
+import {Animal, animalName} from "./questions/Animal";
 import {Color, toAdjective} from "./questions/Color";
 import {Movement} from "./questions/Movement";
 import {Anxiety} from "./questions/Anxiety";
@@ -8,6 +8,7 @@ import {Feeling} from "./questions/Feeling";
 import {Importance} from "./questions/Importance";
 import {Friend} from "./questions/Friend";
 import {Working} from "./questions/Working";
+import {i18nStore} from "../i18n/i18nStore";
 
 export class Result {
 
@@ -25,7 +26,10 @@ export class Result {
     ) {}
 
     get ahyaType(): string {
-        return toAdjective(this.color) + this.animal
+        if (i18nStore.isEN()) {
+            return toAdjective(this.color) + ' ' + animalName(this.animal).toUpperCase()
+        }
+        return toAdjective(this.color) + animalName(this.animal)
     }
 
     get movementExplanation(): string {
@@ -94,7 +98,7 @@ export class Result {
             `.trim()
             case Importance.talent: return pre + `
             `.trim()
-            case Importance.noting: return `
+            case Importance.nothing: return `
                 ${this.ahyaType}タイプの人は、人生において何一つ重要なものは無いと考えています。
             `.trim()
 

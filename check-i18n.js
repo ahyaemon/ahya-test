@@ -8,7 +8,7 @@ const invalidLetters = `
 `.replaceAll(/\s/g, '').split('')
 
 const getFilePathList = (extension) => glob(`src/**/*.${extension}`, { sync: true })
-    .filter(p => { return p.indexOf('i18n.ts') < 0 })
+    .filter(p => { return p.indexOf('i18n.tsx') < 0 })
 
 const hasInvalidLetters = (filePath) => {
     const content = fs.readFileSync(filePath, { encoding: 'utf8' })

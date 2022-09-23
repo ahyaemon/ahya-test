@@ -5,10 +5,12 @@ import musume from "../assets/musume.webp";
 import classes from "./Comment.module.css";
 import {CommentIcon} from "../types/CommentIcon";
 import {CommentPosition} from "../types/CommentPosition";
+import {I18nKey} from "../i18n/i18n";
+import {t} from "../i18n/i18nStore";
 
 type CommentProps = {
     icon: CommentIcon
-    message: string
+    message: I18nKey
     position: CommentPosition
 }
 
@@ -28,7 +30,7 @@ export const Comment: Component<CommentProps> = (props) => {
                 <img src={src} alt="icon"/>
             </div>
             <div class={`${classes.message} ${messageClass}`}>
-                {props.message}
+                {t(props.message)}
             </div>
         </div>
     )

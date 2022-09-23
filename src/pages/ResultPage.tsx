@@ -5,7 +5,8 @@ import {Result} from "../domain/Result";
 import {Animal} from "../domain/questions/Animal";
 import {Color} from "../domain/questions/Color";
 import {toast} from "solid-toast";
-import {Link, useSearchParams} from "@solidjs/router";
+import {useSearchParams} from "@solidjs/router";
+import {t, tc} from "../i18n/i18nStore";
 
 export const ResultPage: Component = () => {
 
@@ -25,8 +26,8 @@ export const ResultPage: Component = () => {
 
         return (
             <div>
-                <p>何か良く分からないエラー発生！！</p>
-                <p><Link href="/">TOPページ</Link>からやり直すべし！！</p>
+                <p>{t("errorOccurred")}</p>
+                <p>{tc("restart")}</p>
             </div>
         )
     }
@@ -34,7 +35,7 @@ export const ResultPage: Component = () => {
     return (
         <div class={classes.container}>
             <div>
-                <div style={{ "margin-top": "20px" }}>あなたの AHYA-TYPE は・・・</div>
+                <div style={{ "margin-top": "20px" }}>{t("yourType")}</div>
                 <div style={{ "margin-top": "40px", "font-size": "24px", "font-weight": "bold", color: "#333" }}>{result.ahyaType}</div>
                 <div style={{ "margin-top": "10px" }}>
                     <div class={`${classes.image} ${animalImageClass(result.animal)} ${animalColorClass(result.color)}`}></div>
@@ -42,7 +43,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "60px", "padding": "0 20px" }}>
-                &#128065; {result.ahyaType}タイプの特徴
+                &#128065; {t("characteristics", result.ahyaType)}
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
@@ -51,8 +52,8 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.quote}>
-                <div class={classes.quoteMessage}>{result.quote.message}</div>
-                <div class={classes.quoteAuthor}>{result.quote.author}</div>
+                <div class={classes.quoteMessage}>{t(result.quote.message)}</div>
+                <div class={classes.quoteAuthor}>{t(result.quote.author)}</div>
             </div>
 
             <div style={{ "margin-top": "20px", "padding": "0 20px" }}>
@@ -61,7 +62,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
-                &#128578; {result.ahyaType}タイプの長所
+                &#128578; {t("pros", result.ahyaType)}
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
@@ -70,7 +71,7 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
-                &#128542; {result.ahyaType}タイプの短所
+                &#128542; {t("cons", result.ahyaType)}
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
@@ -79,11 +80,11 @@ export const ResultPage: Component = () => {
             </div>
 
             <div class={classes.h2} style={{ "margin-top": "40px", "padding": "0 20px" }}>
-                &#127808; {result.ahyaType}タイプの人へのアドバイス
+                &#127808; {t("advice", result.ahyaType)}
             </div>
 
             <div style={{ "margin-top": "10px", "padding": "0 20px" }}>
-                <div class={classes.explanation}>{result.ahyaType}タイプの人に言えることはただ一つ。この性格診断を間に受けないことです。</div>
+                <div class={classes.explanation}>{t("adviceContent", result.ahyaType)}</div>
             </div>
         </div>
     )

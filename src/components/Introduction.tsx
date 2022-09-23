@@ -4,10 +4,11 @@ import {CommentIcon} from "../types/CommentIcon";
 import {CommentPosition} from "../types/CommentPosition";
 import classes from "./Introduction.module.css";
 import {getRandom} from "../utils/random";
+import {I18nKey} from "../i18n/i18n";
 
 type Comment = {
     icon: CommentIcon
-    message: string
+    message: I18nKey
     position: CommentPosition
 }
 
@@ -15,27 +16,27 @@ type Conversation = Comment[]
 
 const conversations: Conversation[] = [
     [
-        createObasanComment(CommentPosition.left, '数問で性格が分かるらしいわよ。とりあえずやってみたら？'),
-        createMusumeComment(CommentPosition.right, 'やなこった！'),
-        createObasanComment(CommentPosition.left, 'クソガキ！'),
+        createObasanComment(CommentPosition.left, 'conversation1a'),
+        createMusumeComment(CommentPosition.right, 'conversation1b'),
+        createObasanComment(CommentPosition.left, 'conversation1c'),
     ],
     [
-        createObasanComment(CommentPosition.left, '質問に答えて性格を診断しましょう'),
-        createMusumeComment(CommentPosition.right, '当てはまる回答がない'),
-        createObasanComment(CommentPosition.left, 'それでも答えるのが大人なのよ'),
+        createObasanComment(CommentPosition.left, 'conversation2a'),
+        createMusumeComment(CommentPosition.right, 'conversation2b'),
+        createObasanComment(CommentPosition.left, 'conversation2c'),
     ],
     [
-        createObasanComment(CommentPosition.left, 'あんまり考え込まずに直感で回答しましょう'),
-        createMusumeComment(CommentPosition.right, 'うーん、本当にそれで良いのかな'),
-        createObasanComment(CommentPosition.left, '言うこと聞いてたか？'),
+        createObasanComment(CommentPosition.left, 'conversation3a'),
+        createMusumeComment(CommentPosition.right, 'conversation3b'),
+        createObasanComment(CommentPosition.left, 'conversation3c'),
     ],
 ]
 
-function createObasanComment(position: CommentPosition, message: string): Comment {
+function createObasanComment(position: CommentPosition, message: I18nKey): Comment {
     return { icon: CommentIcon.obasan, message, position }
 }
 
-function createMusumeComment(position: CommentPosition, message: string): Comment {
+function createMusumeComment(position: CommentPosition, message: I18nKey): Comment {
     return { icon: CommentIcon.musume, message, position }
 }
 
