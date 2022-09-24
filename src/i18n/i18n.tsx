@@ -82,6 +82,18 @@ export const ja = {
     quote7Author: 'ジョジョ六部：ウェザー・リポート',
     quote8: '『一番の近道は遠回りだった』『遠回りこそが俺の最短の道だった』',
     quote8Author: 'ジョジョ七部：ジャイロ・ツェペリ',
+    templateToastComment1: '僕は$$は嫌いだな',
+    templateToastComment2: 'へえ、$$が好きなんだ',
+    templateToastComment3: '$$、良いよね',
+    templateToastComment4: '$$か〜',
+    templateToastComment5: '$$！',
+    templateToastComment6: '$$！？',
+    templateToastComment7: 'いるいる、$$好きな人',
+    toastComment1: 'へえ、そうなんだ！',
+    toastComment2: '知らなかった！',
+    toastComment3: 'マジで？',
+    toastComment4: 'まあそうだよね',
+    toastComment5: 'それ本当？',
 }
 
 export const en: typeof ja = {
@@ -166,7 +178,18 @@ export const en: typeof ja = {
     quote7Author: 'JoJo Part 6: Weather Report',
     quote8: "'The shortest way was the long way' 'The long way was the shortest way for me'",
     quote8Author: 'JoJo Part 7: Gyro Zeppeli',
-
+    templateToastComment1: "I don't like $$.",
+    templateToastComment2: "Wow, you like $$.",
+    templateToastComment3: "$$. That's good.",
+    templateToastComment4: "Oh, $$.",
+    templateToastComment5: "$$!",
+    templateToastComment6: "$$!?",
+    templateToastComment7: "There you are, $$ lover.",
+    toastComment1: "Heh, yeah!",
+    toastComment2: "I didn't know!",
+    toastComment3: "Seriously?",
+    toastComment4: "Well, yeah.",
+    toastComment5: "Is that true?",
 };
 
 export type I18nKey = keyof typeof ja

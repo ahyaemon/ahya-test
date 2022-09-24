@@ -1,25 +1,28 @@
 import {getRandom} from "../utils/random";
+import {I18nKey} from "../i18n/i18n";
+import {t} from "../i18n/i18nStore";
 
-export const templateMessages: string[] = [
-    '僕は$answerは嫌いだな',
-    'へえ、$answerが好きなんだ',
-    '$answer、良いよね',
-    '$answerか〜',
-    '$answer！',
-    '$answer！？',
-    'いるいる、$answer好きな人',
+export const templateMessages: I18nKey[] = [
+    'templateToastComment1',
+    'templateToastComment2',
+    'templateToastComment3',
+    'templateToastComment4',
+    'templateToastComment5',
+    'templateToastComment6',
+    'templateToastComment7',
 ]
 
-export function getReplacedTemplateMessage<T extends string>(answer: T): string {
-    return getRandom(templateMessages).replace('$answer', answer)
+export function getReplacedTemplateMessage(answer: I18nKey): string {
+    const message = t(getRandom(templateMessages), t(answer))
+    return message[0].toUpperCase() + message.slice(1)
 }
 
-export const messages: string[] = [
-    'へえ、そうなんだ！',
-    '知らなかった！',
-    'マジで？',
-    'まあそうだよね',
-    'それ本当？',
+export const messages: I18nKey[] = [
+    'toastComment1',
+    'toastComment2',
+    'toastComment3',
+    'toastComment4',
+    'toastComment5',
 ]
 
 export function getRandomMessage(): string {
