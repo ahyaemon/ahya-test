@@ -94,6 +94,13 @@ export const ja = {
     toastComment3: 'マジで？',
     toastComment4: 'まあそうだよね',
     toastComment5: 'それ本当？',
+    movementWalkComment1: '走ろうよ',
+    movementWalkComment2: 'まあ普通そうだよね',
+    movementRunComment1: '急がば回れ',
+    movementRunComment2: '走るの疲れない？',
+    movementQuitComment1: '行こうよ！',
+    movementQuitComment2: '出不精さん！',
+    movementQuitComment3: '怠け者発見！',
 }
 
 export const en: typeof ja = {
@@ -190,6 +197,13 @@ export const en: typeof ja = {
     toastComment3: "Seriously?",
     toastComment4: "Well, yeah.",
     toastComment5: "Is that true?",
+    movementWalkComment1: "Let's run.",
+    movementWalkComment2: "Well, that's usually the case.",
+    movementRunComment1: "slow and steady wins the race",
+    movementRunComment2: "Aren't you tired of running?",
+    movementQuitComment1: "Come on, let's go!",
+    movementQuitComment2: "Mr. Lazy!",
+    movementQuitComment3: "Lazybones found!",
 };
 
 export type I18nKey = keyof typeof ja
