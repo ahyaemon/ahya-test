@@ -48,7 +48,7 @@ export class Result {
     }
 
     get seasonExplanation(): string {
-        const pre = this.ahyaType + t("seasonResultPre", t(this.season))
+        const pre = t("seasonResultPre", this.ahyaType, t(this.season))
         switch (this.season) {
             case Season.spring: return pre + t("seasonSpringResult")
             case Season.summer: return pre + t("seasonSummerResult")
@@ -65,48 +65,27 @@ export class Result {
     }
 
     get importanceExplanation(): string {
-        const pre = `
-            ${this.ahyaType}タイプの人が人生で最も重視するものは${this.importance}です。
-            ${this.importance}さえあれば他に何も要らないと思っている人もいます。
-        `.trim()
+        const pre = t("importanceResultPre", this.ahyaType, t(this.importance), t(this.importance))
         switch (this.importance) {
-            case Importance.money: return pre + `
-            `.trim()
-            case Importance.family: return pre + `
-            `.trim()
-            case Importance.love: return pre + `
-            `.trim()
-            case Importance.talent: return pre + `
-            `.trim()
-            case Importance.nothing: return `
-                ${this.ahyaType}タイプの人は、人生において何一つ重要なものは無いと考えています。
-            `.trim()
-
+            case Importance.money: return pre
+            case Importance.family: return pre
+            case Importance.love: return pre
+            case Importance.talent: return pre
+            case Importance.nothing: return t("importanceNothingResult", this.ahyaType)
         }
     }
 
     get prosOfFriend(): string {
         switch (this.friend) {
-            case Friend.yes: return `
-                誰とでもすぐに仲良くなれるため、広い人脈を持っています。
-                さまざまなことにチャレンジする好奇心も持ち合わせています。
-            `.trim()
-            case Friend.no: return `
-                警戒心が強く、危険な人や物から遠ざかろうとします。
-                友達は少ないですが、深い関係を築いていくことができます。
-            `.trim()
+            case Friend.yes: return t("propsOfFriendYesResult")
+            case Friend.no: return t("propsOfFriendNoResult")
         }
     }
 
     get consOfFriend(): string {
         switch (this.friend) {
-            case Friend.yes: return `
-                広く浅い友好関係を築きがちです。
-                八方美人なところもあるため、いざと言う時に頼れる人が少ないかもしれません。
-            `.trim()
-            case Friend.no: return `
-                緊張しやすい性格のため、一歩を踏み出せないことがあります。
-            `.trim()
+            case Friend.yes: return t("consOfFriendYesResult")
+            case Friend.no: return t("consOfFriendNoResult")
         }
     }
 

@@ -127,12 +127,18 @@ export const ja = {
     movementRunResult: '$$タイプの人は常に何かしら行動していて、何事にも積極的です。ただ、周りからは焦っているように見られることもあります。',
     anxietyYesResult: 'また、人一倍心配になりやすく、些細なことでもなかなか決断ができなかったり、他人の行動を気にしてしまいます。',
     anxietyNoResult: 'また、些細なことは気にならない性格で、それによって多少のミスが発生しても前向きであり続けることができます。',
-    seasonResultPre: 'タイプの人には$$が好きな人が多く、',
+    seasonResultPre: '$$タイプの人には$$が好きな人が多く、',
     seasonSpringResult: '桜や緑などの自然、新しく始まる生活などに魅力を感じます。',
     seasonSummerResult: '海や夏祭りに魅力を感じたり、セミの声に郷愁を覚えたりします。',
     seasonAutumnResult: 'ススキやコスモス、紅葉などの自然、他にも栗やさつまいもなどの食べ物、またハロウィンなどのイベントに魅力を感じます。',
     seasonWinterResult: '基本的に全員雪が好きです。',
     feelingYesResult: '気分屋でもあるので、季節によらずその日のイベントや出来事にも気持ちが左右されます。',
+    importanceResultPre: '$$タイプの人が人生で最も重視するものは$$です。$$さえあれば他に何も要らないと思っている人もいます。',
+    importanceNothingResult: '$$タイプの人は、人生において何一つ重要なものは無いと考えています。',
+    propsOfFriendYesResult: '誰とでもすぐに仲良くなれるため、広い人脈を持っています。さまざまなことにチャレンジする好奇心も持ち合わせています。',
+    propsOfFriendNoResult: '警戒心が強く、危険な人や物から遠ざかろうとします。友達は少ないですが、深い関係を築いていくことができます。',
+    consOfFriendYesResult: '広く浅い友好関係を築きがちです。八方美人なところもあるため、いざと言う時に頼れる人が少ないかもしれません。',
+    consOfFriendNoResult: '緊張しやすい性格のため、一歩を踏み出せないことがあります。',
 }
 
 export const en: typeof ja = {
@@ -262,12 +268,19 @@ export const en: typeof ja = {
     movementRunResult: '$$ type people are always doing something and are proactive about everything. However, they may be seen by others as being in a hurry.',
     anxietyYesResult: 'They also tend to worry more than others and find it difficult to make decisions on trivial matters or worry about the actions of others.',
     anxietyNoResult: 'They also has a personality that does not mind minor details, which allows him to remain positive even when some mistakes are made.',
-    seasonResultPre: ' type people like $$, ',
+    seasonResultPre: '$$ type people like $$, ',
     seasonSpringResult: 'and are attracted to nature, such as cherry blossoms and greenery, and new beginnings in life.',
     seasonSummerResult: 'find the sea and summer festivals appealing, and feel nostalgia for the sound of cicadas.',
     seasonAutumnResult: 'and are attracted to nature such as silver grass, cosmos, and autumn leaves, other foods such as chestnuts and sweet potatoes, and also events such as Halloween.',
     seasonWinterResult: 'and basically all of them like snow.',
     feelingYesResult: 'They are also moody, so their feelings are influenced by the events and happenings of the day, regardless of the season.',
+    importanceResultPre: "The most important thing in a $$ person's life is $$. Some people think that as long as they have $$, they don't need anything else.",
+    importanceNothingResult: '$$ type people believe that nothing in life is more important.',
+    propsOfFriendYesResult: "They have a wide network of contacts because they get along easily with everyone. They also have the curiosity to try different things.",
+    propsOfFriendNoResult: "They are very cautious and try to stay away from dangerous people and things. They do not have many friends, but they can build deep relationships.",
+    consOfFriendYesResult: 'They tend to build broad and shallow friendships. Because of their tendency to be good-natured on all sides, they may not have many people they can turn to in times of need.',
+    consOfFriendNoResult: 'They are easily nervous and may not be able to take the first step.',
+
 };
 
 export type I18nKey = keyof typeof ja
