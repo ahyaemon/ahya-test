@@ -108,6 +108,18 @@ export const ja = {
     anxietyYesComment5: 'エアコン切った？',
     anxietyNoComment1: '図太いw',
     anxietyNoComment2: '無神経w',
+    feelingYesComment1: '僕も気分屋！',
+    feelingYesComment2: '僕と一緒だね！',
+    feelingYesComment3: '気が合うね！',
+    friendYesComment1: 'コミュ力の化け物！',
+    friendYesComment2: 'うらやましい',
+    friendNoComment1: '難しいよね',
+    friendNoComment2: '人見知りってやつ〜？',
+    importanceNothingComment: 'まじ？何も要らないの？',
+    importanceFamilyComment: 'まあ家族は大事だわな',
+    importanceMoneyComment: '金に溺れるなよ！',
+    importanceLoveComment: '愛こそ全て！',
+    importanceTalentComment: '才能ってそんなに大事？',
 }
 
 export const en: typeof ja = {
@@ -218,6 +230,18 @@ export const en: typeof ja = {
     anxietyYesComment5: 'Did you turn off the air conditioning?',
     anxietyNoComment1: "You're bold, lol.",
     anxietyNoComment2: 'Too insensitive lol.',
+    feelingYesComment1: "I'm a moody person too!",
+    feelingYesComment2: "You're with me!",
+    feelingYesComment3: "You're on the same page!",
+    friendYesComment1: 'Communication monster!',
+    friendYesComment2: 'I envy you.',
+    friendNoComment1: "It's hard to make friends...",
+    friendNoComment2: 'Shyness, you mean?',
+    importanceNothingComment: "Seriously? You don't want anything?",
+    importanceFamilyComment: 'Well, family is important.',
+    importanceMoneyComment: "Don't drown in money!",
+    importanceLoveComment: 'Love is all!',
+    importanceTalentComment: 'Is talent really that important?',
 };
 
 export type I18nKey = keyof typeof ja

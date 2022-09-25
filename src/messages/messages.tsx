@@ -26,5 +26,5 @@ export const messages: I18nKey[] = [
 ]
 
 export function getRandomMessage(): string {
-    return getRandom(messages)
+    return t(getRandom(messages))
 }

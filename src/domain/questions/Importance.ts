@@ -1,5 +1,6 @@
 import {Question} from "../Question";
 import {getReplacedTemplateMessage} from "../../messages/messages";
+import {t} from "../../i18n/i18nStore";
 
 export const Importance = {
     family: 'family',
@@ -16,11 +17,11 @@ export const initialImportanceQuestion = Question.createUnchecked(
     [Importance.family, Importance.money, Importance.love, Importance.talent, Importance.nothing],
     option => {
         switch (option) {
-            case Importance.nothing: return 'まじ？何も要らないの？'
-            case Importance.family: return 'まあ家族は大事だわな'
-            case Importance.money: return '金に溺れるなよ！'
-            case Importance.love: return '愛こそ全て！'
-            case Importance.talent: return '才能ってそんなに大事？'
+            case Importance.nothing: return t("importanceNothingComment")
+            case Importance.family: return t("importanceFamilyComment")
+            case Importance.money: return t("importanceMoneyComment")
+            case Importance.love: return t("importanceLoveComment")
+            case Importance.talent: return t("importanceTalentComment")
             default: return getReplacedTemplateMessage(option)
         }
     },
