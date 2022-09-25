@@ -11,6 +11,7 @@ export type Language = typeof Language[keyof typeof Language]
 
 function createI18nStore() {
 
+    // TODO Determine from the browser's language settings.
     const [selectedLanguage, setSelectedLanguage] = createSignal<Language>('JP')
 
     return {
