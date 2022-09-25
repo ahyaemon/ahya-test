@@ -101,6 +101,13 @@ export const ja = {
     movementQuitComment1: '行こうよ！',
     movementQuitComment2: '出不精さん！',
     movementQuitComment3: '怠け者発見！',
+    anxietyYesComment1: 'ガスの元栓閉めた？',
+    anxietyYesComment2: '窓閉めた？',
+    anxietyYesComment3: '家の鍵閉めた？',
+    anxietyYesComment4: '電気消した？',
+    anxietyYesComment5: 'エアコン切った？',
+    anxietyNoComment1: '図太いw',
+    anxietyNoComment2: '無神経w',
 }
 
 export const en: typeof ja = {
@@ -204,6 +211,13 @@ export const en: typeof ja = {
     movementQuitComment1: "Come on, let's go!",
     movementQuitComment2: "Mr. Lazy!",
     movementQuitComment3: "Lazybones found!",
+    anxietyYesComment1: 'Did you close the gas tap?',
+    anxietyYesComment2: 'Did you close the window?',
+    anxietyYesComment3: 'Did you lock your house?',
+    anxietyYesComment4: 'Did you turn the lights off?',
+    anxietyYesComment5: 'Did you turn off the air conditioning?',
+    anxietyNoComment1: "You're bold, lol.",
+    anxietyNoComment2: 'Too insensitive lol.',
 };
 
 export type I18nKey = keyof typeof ja
