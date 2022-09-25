@@ -120,6 +120,8 @@ export const ja = {
     importanceMoneyComment: '金に溺れるなよ！',
     importanceLoveComment: '愛こそ全て！',
     importanceTalentComment: '才能ってそんなに大事？',
+    workingYesComment: '一人っていいよね',
+    workingNoComment: '僕は一人の方が気楽だな',
 }
 
 export const en: typeof ja = {
@@ -242,6 +244,8 @@ export const en: typeof ja = {
     importanceMoneyComment: "Don't drown in money!",
     importanceLoveComment: 'Love is all!',
     importanceTalentComment: 'Is talent really that important?',
+    workingYesComment: "It's nice to be alone.",
+    workingNoComment: "I'm more comfortable being alone.",
 };
 
 export type I18nKey = keyof typeof ja
