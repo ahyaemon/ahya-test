@@ -122,6 +122,9 @@ export const ja = {
     importanceTalentComment: '才能ってそんなに大事？',
     workingYesComment: '一人っていいよね',
     workingNoComment: '僕は一人の方が気楽だな',
+    movementQuitResult: '$$タイプの人は出不精で、一日中家にいることもあります。',
+    movementWalkResult: '$$タイプの人はマイペースで、何事も自分のペースで進めます。ただ、命をおびやかすような非常事態や緊急事態の時には、テキパキと素早く行動します。',
+    movementRunResult: '$$タイプの人は常に何かしら行動していて、何事にも積極的です。ただ、周りからは焦っているように見られることもあります。',
 }
 
 export const en: typeof ja = {
@@ -246,6 +249,9 @@ export const en: typeof ja = {
     importanceTalentComment: 'Is talent really that important?',
     workingYesComment: "It's nice to be alone.",
     workingNoComment: "I'm more comfortable being alone.",
+    movementQuitResult: '$$ type people are reluctant to leave the house and may stay home all day.',
+    movementWalkResult: '$$ type people are self-paced, and they go at their own pace in everything they do. However, in the event of a life-threatening or emergency situation, they act quickly and crisply.',
+    movementRunResult: '$$ type people are always doing something and are proactive about everything. However, they may be seen by others as being in a hurry.',
 };
 
 export type I18nKey = keyof typeof ja

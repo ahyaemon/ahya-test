@@ -8,7 +8,7 @@ import {Feeling} from "./questions/Feeling";
 import {Importance} from "./questions/Importance";
 import {Friend} from "./questions/Friend";
 import {Working} from "./questions/Working";
-import {i18nStore} from "../i18n/i18nStore";
+import {i18nStore, t} from "../i18n/i18nStore";
 
 export class Result {
 
@@ -34,17 +34,9 @@ export class Result {
 
     get movementExplanation(): string {
         switch (this.movement) {
-            case Movement.quit: return `
-                ${this.ahyaType}タイプの人は出不精で、一日中家にいることもあります。
-            `.trim()
-            case Movement.walk: return `
-                ${this.ahyaType}タイプの人はマイペースで、何事も自分のペースで進めます。
-                ただ、命をおびやかすような非常事態や緊急事態の時には、テキパキと素早く行動します。
-            `.trim()
-            case Movement.run: return `
-                ${this.ahyaType}タイプの人は常に何かしら行動していて、何事にも積極的です。
-                ただ、周りからは焦っているように見られることもあります。
-            `.trim()
+            case Movement.quit: return t("movementQuitResult", this.ahyaType)
+            case Movement.walk: return t("movementWalkResult", this.ahyaType)
+            case Movement.run: return t("movementRunResult", this.ahyaType)
         }
     }
 
