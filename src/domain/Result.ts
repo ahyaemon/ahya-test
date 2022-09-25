@@ -91,25 +91,21 @@ export class Result {
 
     get propsOfWorking(): string {
         switch (this.working) {
-            case Working.yes: return `
-                また、他人に頼らず一人で物事を成し遂げること${this.friend === Friend.yes ? 'も' : 'が'}得意で、
-                いつの間にか凄まじい成果を発揮していることもあります。
-            `.trim()
-            case Working.no: return `
-                また、協調性があり、${this.friend === Friend.no ? '実は' : ''}大人数での作業が得意なのも特徴です。
-                ${this.ahyaType}タイプの人は組織のリーダーにも多く見られます。
-            `.trim()
+            case Working.yes: switch (this.friend) {
+                case Friend.yes: return t("propsOfWorkingYesResultWithFriendYes")
+                case Friend.no: return t("propsOfWorkingYesResultWithFriendNo")
+            }
+            case Working.no: switch (this.friend) {
+                case Friend.yes: return t("propsOfWorkingNoResultWithFriendYes", this.ahyaType)
+                case Friend.no: return t("propsOfWorkingNoResultWithFriendNo", this.ahyaType)
+            }
         }
     }
 
     get consOfWorking(): string {
         switch (this.working) {
-            case Working.yes: return `
-                大人数での作業が苦手なため、チームで仕事をする時にストレスを感じる人も多いようです。
-            `.trim()
-            case Working.no: return `
-                人に頼りがちなところもあり、いざ一人で何かを成し遂げようとした時に、何から初めて良いのか分からないこともあります。
-            `.trim()
+            case Working.yes: return t("consOfWorkingYesResult")
+            case Working.no: return t("consOfWorkingNoResult")
         }
     }
 }

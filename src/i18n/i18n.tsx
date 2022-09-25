@@ -139,6 +139,12 @@ export const ja = {
     propsOfFriendNoResult: '警戒心が強く、危険な人や物から遠ざかろうとします。友達は少ないですが、深い関係を築いていくことができます。',
     consOfFriendYesResult: '広く浅い友好関係を築きがちです。八方美人なところもあるため、いざと言う時に頼れる人が少ないかもしれません。',
     consOfFriendNoResult: '緊張しやすい性格のため、一歩を踏み出せないことがあります。',
+    propsOfWorkingYesResultWithFriendYes: 'また、他人に頼らず一人で物事を成し遂げることも得意で、いつの間にか凄まじい成果を発揮していることもあります。',
+    propsOfWorkingYesResultWithFriendNo: 'また、他人に頼らず一人で物事を成し遂げることが得意で、いつの間にか凄まじい成果を発揮していることもあります。',
+    propsOfWorkingNoResultWithFriendYes: 'また、協調性があり、大人数での作業が得意なのも特徴です。$$タイプの人は組織のリーダーにも多く見られます。',
+    propsOfWorkingNoResultWithFriendNo: 'また、協調性があり、実は大人数での作業が得意なのも特徴です。$$タイプの人は組織のリーダーにも多く見られます。',
+    consOfWorkingYesResult: '大人数での作業が苦手なため、チームで仕事をする時にストレスを感じる人も多いようです。',
+    consOfWorkingNoResult: '人に頼りがちなところもあり、いざ一人で何かを成し遂げようとした時に、何から初めて良いのか分からないこともあります。',
 }
 
 export const en: typeof ja = {
@@ -280,7 +286,12 @@ export const en: typeof ja = {
     propsOfFriendNoResult: "They are very cautious and try to stay away from dangerous people and things. They do not have many friends, but they can build deep relationships.",
     consOfFriendYesResult: 'They tend to build broad and shallow friendships. Because of their tendency to be good-natured on all sides, they may not have many people they can turn to in times of need.',
     consOfFriendNoResult: 'They are easily nervous and may not be able to take the first step.',
-
+    propsOfWorkingYesResultWithFriendYes: 'They are also good at accomplishing things on their own without relying on others, and can achieve tremendous results without even knowing it.',
+    propsOfWorkingYesResultWithFriendNo: 'They are also good at accomplishing things on their own without relying on others and can achieve tremendous results without even knowing it.',
+    propsOfWorkingNoResultWithFriendYes: 'They are also cooperative and good at working with large groups. $$ type people are often found in organizational leaders.',
+    propsOfWorkingNoResultWithFriendNo: 'They are also cooperative and are actually good at working in large groups. $$ type people are often found in organizational leaders.',
+    consOfWorkingYesResult: 'They are not comfortable working in large groups, and many find it stressful when working in teams.',
+    consOfWorkingNoResult: 'They tend to rely on others, and when it comes time to accomplish something on their own, they may not know where to start.',
 };
 
 export type I18nKey = keyof typeof ja
