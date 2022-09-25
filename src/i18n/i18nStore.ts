@@ -1,5 +1,6 @@
 import {createSignal, JSX} from "solid-js";
 import {en, ja} from "./i18n";
+import {replace} from "../utils/string";
 
 export const Language = {
     jp: 'JP',
@@ -23,12 +24,12 @@ function createI18nStore() {
 export const i18nStore = createI18nStore()
 
 // translate
-export function t(key: keyof typeof ja, replacing: string = ''): string {
+export function t(key: keyof typeof ja, ...replacing: string[]): string {
     const translated = _t(key)
     if (typeof translated !== 'string') {
         throw Error('translated value is not string')
     }
-    return translated.replace('$$', replacing)
+    return replace(translated, ...replacing)
 }
 
 // get translated component
