@@ -42,36 +42,24 @@ export class Result {
 
     get anxietyExplanation(): string {
         switch (this.anxiety) {
-            case Anxiety.yes: return `
-                また、人一倍心配になりやすく、些細なことでもなかなか決断ができなかったり、他人の行動を気にしてしまいます。
-            `.trim()
-            case Anxiety.no: return `
-                また、些細なことは気にならない性格で、それによって多少のミスが発生しても前向きであり続けることができます。
-            `.trim()
+            case Anxiety.yes: return t("anxietyYesResult")
+            case Anxiety.no: return t("anxietyNoResult")
         }
     }
 
     get seasonExplanation(): string {
-        const pre = `${this.ahyaType}タイプの人には${this.season}が好きな人が多く、`
+        const pre = this.ahyaType + t("seasonResultPre", t(this.season))
         switch (this.season) {
-            case Season.spring: return pre + `
-                桜や緑などの自然、新しく始まる生活などに魅力を感じます。
-            `.trim()
-            case Season.summer: return pre + `
-                海や夏祭りに魅力を感じたり、セミの声に郷愁を覚えたりします。
-            `.trim()
-            case Season.autumn: return pre + `
-                ススキやコスモス、紅葉などの自然、他にも栗やさつまいもなどの食べ物、またハロウィンなどのイベントに魅力を感じます。
-            `.trim()
-            case Season.winter: return pre + `
-                基本的に全員雪が好きです。
-            `.trim()
+            case Season.spring: return pre + t("seasonSpringResult")
+            case Season.summer: return pre + t("seasonSummerResult")
+            case Season.autumn: return pre + t("seasonAutumnResult")
+            case Season.winter: return pre + t("seasonWinterResult")
         }
     }
 
     get feelingExplanation(): string {
         switch (this.feeling) {
-            case Feeling.yes: return `気分屋でもあるので、季節によらずその日のイベントや出来事にも気持ちが左右されます。`
+            case Feeling.yes: return t("feelingYesResult")
             case Feeling.no: return ``
         }
     }

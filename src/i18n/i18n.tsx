@@ -125,6 +125,14 @@ export const ja = {
     movementQuitResult: '$$タイプの人は出不精で、一日中家にいることもあります。',
     movementWalkResult: '$$タイプの人はマイペースで、何事も自分のペースで進めます。ただ、命をおびやかすような非常事態や緊急事態の時には、テキパキと素早く行動します。',
     movementRunResult: '$$タイプの人は常に何かしら行動していて、何事にも積極的です。ただ、周りからは焦っているように見られることもあります。',
+    anxietyYesResult: 'また、人一倍心配になりやすく、些細なことでもなかなか決断ができなかったり、他人の行動を気にしてしまいます。',
+    anxietyNoResult: 'また、些細なことは気にならない性格で、それによって多少のミスが発生しても前向きであり続けることができます。',
+    seasonResultPre: 'タイプの人には$$が好きな人が多く、',
+    seasonSpringResult: '桜や緑などの自然、新しく始まる生活などに魅力を感じます。',
+    seasonSummerResult: '海や夏祭りに魅力を感じたり、セミの声に郷愁を覚えたりします。',
+    seasonAutumnResult: 'ススキやコスモス、紅葉などの自然、他にも栗やさつまいもなどの食べ物、またハロウィンなどのイベントに魅力を感じます。',
+    seasonWinterResult: '基本的に全員雪が好きです。',
+    feelingYesResult: '気分屋でもあるので、季節によらずその日のイベントや出来事にも気持ちが左右されます。',
 }
 
 export const en: typeof ja = {
@@ -252,6 +260,14 @@ export const en: typeof ja = {
     movementQuitResult: '$$ type people are reluctant to leave the house and may stay home all day.',
     movementWalkResult: '$$ type people are self-paced, and they go at their own pace in everything they do. However, in the event of a life-threatening or emergency situation, they act quickly and crisply.',
     movementRunResult: '$$ type people are always doing something and are proactive about everything. However, they may be seen by others as being in a hurry.',
+    anxietyYesResult: 'They also tend to worry more than others and find it difficult to make decisions on trivial matters or worry about the actions of others.',
+    anxietyNoResult: 'They also has a personality that does not mind minor details, which allows him to remain positive even when some mistakes are made.',
+    seasonResultPre: ' type people like $$, ',
+    seasonSpringResult: 'and are attracted to nature, such as cherry blossoms and greenery, and new beginnings in life.',
+    seasonSummerResult: 'find the sea and summer festivals appealing, and feel nostalgia for the sound of cicadas.',
+    seasonAutumnResult: 'and are attracted to nature such as silver grass, cosmos, and autumn leaves, other foods such as chestnuts and sweet potatoes, and also events such as Halloween.',
+    seasonWinterResult: 'and basically all of them like snow.',
+    feelingYesResult: 'They are also moody, so their feelings are influenced by the events and happenings of the day, regardless of the season.',
 };
 
 export type I18nKey = keyof typeof ja
