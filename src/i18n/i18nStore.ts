@@ -1,6 +1,7 @@
 import {createSignal, JSX} from "solid-js";
 import {en, ja} from "./i18n";
 import {replace} from "../utils/string";
+import {browserLanguageSettingIsJapanese} from "../utils/browser";
 
 export const Language = {
     jp: 'JP',
@@ -9,10 +10,9 @@ export const Language = {
 
 export type Language = typeof Language[keyof typeof Language]
 
-function createI18nStore() {
+function createI18nStore(language: Language) {
 
-    // TODO Determine from the browser's language settings.
-    const [selectedLanguage, setSelectedLanguage] = createSignal<Language>('JP')
+    const [selectedLanguage, setSelectedLanguage] = createSignal<Language>(language)
 
     return {
         selectedLanguage,
@@ -22,7 +22,8 @@ function createI18nStore() {
     }
 }
 
-export const i18nStore = createI18nStore()
+const language = browserLanguageSettingIsJapanese() ? Language.jp : Language.en
+export const i18nStore = createI18nStore(language)
 
 // translate
 export function t(key: keyof typeof ja, ...replacing: string[]): string {
